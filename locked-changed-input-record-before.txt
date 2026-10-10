@@ -1,0 +1,43 @@
+FIN 43900 PROJECT 1 - LOCKED CHANGED-INPUT RECORD
+IBM Software Revenue Growth Test
+
+PART A - BEFORE RUNNING THE TEST (AI OFF)
+
+Date and time of prediction: 10/10/2026 @ 12:39pm
+Baseline model Git commit ID: f91410f
+Prediction-file Git commit ID (save after committing, before running): 
+
+Input being changed: Software revenue growth shift
+Original input: 0 percentage points
+New input: +2 percentage points (for 2027-2030)
+Original IBM intrinsic value: $181.95 per share
+
+MY PREDICTION (before running the test):
+Expected effect on revenue, operating profit, and FCFF: I expect IBM's revenue, operating profit, and free cash flow to increase as stronger software growth generates additional sales and earnings over the forecast period.
+
+Expected effect on intrinsic value per share: I expect IBM's intrinsic value to increase above the baseline valuation of $181.95 per share because higher projected free cash flows should increase the present value of the business.
+
+Expected effect on my investment recommendation: I expect IBM's valuation to become more attractive, but I do not anticipate this adjustment alone will change my Watch/Defer recommendation, given the current market price of $231.40.
+
+Why I expect these changes: I believe IBM's AI and hybrid-cloud businesses could drive stronger software revenue growth than my baseline forecast assumes. Higher software demand could improve operating earnings and free cash flow, supporting a higher intrinsic valuation over time.
+
+
+PART B - AFTER RUNNING THE TEST
+
+Test date and time:
+New IBM intrinsic value per share: 
+New 2030 operating profit (EBIT), $ millions: 
+New 2030 FCFF, $ millions: 
+WACC after change: 
+
+Did the results move as I predicted?:
+
+Did my investment recommendation change?:
+
+If results differed from my prediction?:
+
+Location of before/after saved results:
+
+Did I reset the model to its original baseline?
+
+
