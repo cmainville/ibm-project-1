@@ -1,0 +1,117 @@
+{
+  "model_status": "provisional valuation screen — no investment action selected",
+  "valuation_date": "2026-09-01",
+  "units": "USD millions except per-share items and percentages",
+  "source_posture": "Public filings and public market data available by 2026-09-01; analyst paths are explicitly marked DRAFT.",
+  "tax_definitions": {
+    "income_tax_provision": "Income-statement provision; H1 2026 reported value is $484m. It is not labeled or used as cash taxes.",
+    "normalized_nopat_tax_rate": "16% analyst operating-valuation normalization; used in NOPAT/FCFF only.",
+    "marginal_tax_rate_for_wacc": "21% separate WACC tax-shield assumption; not automatically equal to NOPAT tax rate.",
+    "actual_cash_taxes_paid": "UNRESOLVED — no independently sourced amount is used in this model."
+  },
+  "actuals": {
+    "fy2025_revenue": {"software": 29962, "consulting": 21055, "infrastructure": 15718, "financing": 737, "other": 63},
+    "h1_2025_revenue": {"software": 13722, "consulting": 10382, "infrastructure": 7027, "financing": 357, "other": 30},
+    "h1_2026": {
+      "revenue": {"software": 14813, "consulting": 10599, "infrastructure": 7161, "financing": 406, "other": 100},
+      "income_statement": {"revenue": 33079, "cost": 14222, "sga": 10071, "rnd": 4485, "ip_income": 338, "other_income": 186, "interest": 959, "pretax": 3866, "income_tax_provision": 484, "net_income": 3381},
+      "cash_flow": {"cfo": 7766, "depreciation": 1088, "amortization": 1535, "capex": 461, "software_investment": 313, "dividends": 3166}
+    }
+  },
+  "opening_june_2026": {
+    "cash": 7172, "restricted_cash": 45, "marketable_securities": 960, "trade_ar": 6044, "financing_receivables": 13782,
+    "other_ar": 1348, "inventory": 1746, "deferred_costs": 2073, "prepaids_other_current": 3188,
+    "ppe": 5736, "operating_rou": 3068, "prepaid_pension": 7645, "deferred_tax_assets": 8709,
+    "goodwill": 74599, "intangibles": 13955, "investments_other": 1314, "unmapped_other_assets_reconciliation": 714, "reported_rounding_reconciliation": 1,
+    "taxes_payable": 2023, "accounts_payable": 4395, "comp_benefits": 3364, "deferred_income": 20432,
+    "operating_leases": 3285, "other_accrued": 3425, "other_liabilities": 10044, "retirement_obligations": 8603,
+    "corporate_debt": 48940, "financing_debt": 13047, "equity": 34541
+  },
+  "market": {
+    "ibm_price_sep1": 231.40,
+    "risk_free_rate_sep1": 0.0479,
+    "implied_erp_sep1": 0.0414,
+    "basic_shares_jun30": 942.13439,
+    "diluted_shares_h1_proxy": 952.7,
+    "beta_sep1_third_party_indication": 0.70,
+    "single_a_oas_sep1": 0.0068
+  },
+  "reported_non_equity_claims_june": {"nci": 89},
+  "draft_assumptions": {
+    "h2_seasonality": {
+      "method": "FY2025 segment-specific H2/H1 revenue ratio; no monthly seasonality data available",
+      "h2_start": "2026-07-01",
+      "valuation_boundary": "2026-09-02",
+      "fy_end_exclusive": "2027-01-01",
+      "prevaluation_days": 63,
+      "residual_days_after_sep1": 121,
+      "h2_days": 184,
+      "residual_cash_note": "After the September 1 close, future cash flow begins September 2. Sep. 2–Dec. 31 is 121 of 184 H2 calendar days. November 1 is an approximate residual-period midpoint."
+    },
+    "segment_growth_after_2026": {
+      "software": [0.060, 0.055, 0.050, 0.045],
+      "consulting": [0.025, 0.030, 0.030, 0.030],
+      "infrastructure": [0.020, 0.020, 0.020, 0.020],
+      "financing": [0.020, 0.020, 0.020, 0.020],
+      "other": [0.000, 0.000, 0.000, 0.000]
+    },
+    "operating_drivers": {
+      "operating_gross_margin": [0.572, 0.580, 0.585, 0.588, 0.590],
+      "operating_sga_pct": [0.308, 0.303, 0.298, 0.294, 0.290],
+      "rnd_pct": [0.137, 0.136, 0.135, 0.134, 0.133],
+      "ip_income_pct": [0.010, 0.010, 0.010, 0.010, 0.010],
+      "other_income_pct": [0.004, 0.004, 0.004, 0.004, 0.004],
+      "financing_pretax_margin": [0.558, 0.550, 0.550, 0.550, 0.550],
+      "corporate_interest_rate": [0.0305, 0.0325, 0.0350, 0.0375, 0.0400],
+      "normalized_nopat_tax_rate": [0.160, 0.160, 0.160, 0.160, 0.160]
+    },
+    "working_capital_and_capital": {
+      "trade_ar_pct_operating_revenue": [0.095, 0.095, 0.094, 0.094, 0.094],
+      "other_ar_pct_operating_revenue": [0.020, 0.020, 0.020, 0.020, 0.020],
+      "inventory_days_on_operating_cost": [20.0, 19.5, 19.0, 19.0, 19.0],
+      "deferred_costs_pct_operating_revenue": [0.031, 0.031, 0.031, 0.031, 0.031],
+      "prepaids_pct_operating_revenue": [0.045, 0.045, 0.045, 0.045, 0.045],
+      "ap_pct_operating_cost": [0.157, 0.157, 0.157, 0.157, 0.157],
+      "comp_benefits_pct_operating_revenue": [0.052, 0.052, 0.052, 0.052, 0.052],
+      "deferred_income_pct_operating_revenue": [0.290, 0.290, 0.290, 0.290, 0.290],
+      "taxes_payable_pct_income_tax_provision": [0.250, 0.250, 0.250, 0.250, 0.250],
+      "other_accrued_pct_operating_revenue": [0.052, 0.052, 0.052, 0.052, 0.052],
+      "capex_pct_operating_revenue": [0.015, 0.015, 0.016, 0.016, 0.016],
+      "capitalized_software_pct_operating_revenue": [0.010, 0.010, 0.010, 0.010, 0.010],
+      "depreciation_pct_beginning_ppe": [0.190, 0.380, 0.380, 0.380, 0.380],
+      "amortization_pct_beginning_intangibles": [0.210, 0.190, 0.170, 0.150, 0.130]
+    },
+    "balance_sheet_and_financing": {
+      "corporate_debt": [48940, 48000, 47000, 46000, 45000],
+      "financing_receivables_growth": [0.000, 0.020, 0.020, 0.020, 0.020],
+      "financing_debt_to_receivables": 0.9466652155,
+      "reported_financing_equity_june": 1450,
+      "annual_common_dividends": [6332, 6450, 6575, 6700, 6825],
+      "minimum_operating_cash": [7500, 7500, 7500, 7500, 7500],
+      "minimum_cash_sensitivity": [6500, 9000],
+      "static_assets": [45, 3068, 7645, 8709, 74599, 1314, 714, 1],
+      "static_liabilities": [3285, 10044, 8603]
+    },
+    "valuation_assumptions_not_used_in_statements": {
+      "terminal_growth": 0.025,
+      "terminal_incremental_roic": 0.15,
+      "terminal_incremental_roic_range": [0.12, 0.18],
+      "marginal_tax_rate_for_wacc": 0.21,
+      "marginal_tax_rate_for_wacc_range": [0.16, 0.25],
+      "beta_methodology_verified": false,
+      "wacc_debt_method": "September 1 10-year Treasury plus September 1 ICE BofA single-A OAS; not an IBM bond quote"
+    }
+  },
+  "documented_bounds": {
+    "growth_floor": -0.10,
+    "growth_ceiling": 0.15,
+    "margin_floor": 0.00,
+    "margin_ceiling": 0.80,
+    "cash_tax_floor": 0.00,
+    "cash_tax_ceiling": 0.35,
+    "terminal_growth_floor": 0.00,
+    "terminal_growth_ceiling": 0.04,
+    "minimum_cash_floor": 5000,
+    "minimum_cash_ceiling": 10000
+  }
+}
