@@ -105,4 +105,4 @@ No IBM course training-case starter file or published answer key is present in t
 
 ## 8. PDF status
 
-`docs/validation-and-ai-use.html` is the print-ready companion to this Markdown record. No reliable HTML-to-PDF exporter was available in this environment, so the existing PDF is preserved. Manually open the HTML in a browser, choose Print, select Save as PDF, use Letter paper with default margins/background graphics as needed, and visually compare the exported PDF to the HTML before replacing `docs/validation-and-ai-use.pdf`.
+The final Validation and AI Use PDF was generated from the updated HTML on October 14, 2026, and visually reviewed for readability, table formatting, and content consistency. The PDF contains the approved $182.29 base valuation, 28-test validation record, historical locked experiment, AI-use disclosures, and unresolved financial limitations. The Markdown record provides the more detailed supporting documentation.
