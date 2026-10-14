@@ -1,6 +1,6 @@
-# Stage 2 controlled SBC repair — pending student approval
+# Stage 2 controlled SBC repair — approved October 14, 2026
 
-**Status: uncommitted analyst-review draft.** This report documents the approved accounting repair and its consequences. It does not change the student's Watch / Defer recommendation, does not change the Locked Changed-Input Records, and does not update the deck, PDFs, or screenshots.
+**Status: approved and committed in `ef4c025` on October 14, 2026.** This report documents the accounting repair and its consequences. It does not change the student's Watch / Defer recommendation or the original Locked Changed-Input Records and screenshots, which preserve historical pre-SBC experiment evidence. The later deck synchronization updates only current presentation outputs.
 
 ## Confirmed evidence and accounting correction
 

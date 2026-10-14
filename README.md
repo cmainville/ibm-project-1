@@ -1,6 +1,6 @@
 # IBM Project 1 - Edition B
 
-**Decision:** Watch / Defer IBM common stock. The September 1, 2026 after-close price was **$231.40**. The completed five-year operating DCF produces **$144.80 / $181.95 / $223.94** per diluted share in low/base/high causal cases. Base is below price and terminal value is 78.1% of operating EV. The workbench and deck therefore frame a monitoring decision, not an initiation.
+**Decision:** Watch / Defer IBM common stock. The September 1, 2026 after-close price was **$231.40**. The approved five-year operating DCF produces **$145.13 / $182.29 / $224.28** per diluted share in low/base/high causal cases. Base is below price and terminal value is 78.1% of operating EV. The workbench and deck therefore frame a monitoring decision, not an initiation.
 
 ## Start the interactive workbench
 
@@ -71,4 +71,4 @@ Reported facts, analyst forecasts and calculation outputs are deliberately separ
 
 Primary history is IBM’s [FY2025 10-K](https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231_d2.htm) and [Q2 2026 10-Q](https://www.sec.gov/Archives/edgar/data/51143/000005114326000078/ibm-20260630.htm). Cutoff-dated market, peer and dividend records sit in `evidence-ledger.md`. Do not use post-September 1 prices, results, guidance or consensus.
 
-The 0.70 beta is a qualified third-party indication with opaque methodology; 5.47% pre-tax debt cost is a Treasury plus single-A OAS proxy, not an IBM bond yield. The cash reserve, normalized tax rate, terminal ROIC/growth and pension convention are analyst assumptions. The point-in-time diluted share count and Financing fair value remain unresolved. These limitations materially support Watch / Defer.
+The 0.70 beta is a qualified third-party indication with opaque methodology; 5.47% pre-tax debt cost is a Treasury plus single-A OAS proxy, not an IBM bond yield. The cash reserve, normalized tax rate, terminal ROIC/growth and pension convention are analyst assumptions. The point-in-time diluted share count and Financing fair value remain unresolved. The FY2026 company-style FCF proxy is $10.918bn, approximately $4.782bn below the July management-outlook reference; future SBC dilution is not forecast. These limitations materially support Watch / Defer.

@@ -1,8 +1,8 @@
 # Stage 2 investment-judgment review — analyst-review draft pending the student's investment judgment
 
-**Scope and cutoff.** This is an objective analyst-review draft, not a replacement investment decision. It uses the September 1, 2026 after-close cutoff and current Python output only; no forecast, valuation assumption, equation, or recommendation has been changed.
+**Scope and cutoff.** This is an objective analyst-review draft, not a replacement investment decision. It uses the September 1, 2026 after-close cutoff and current Python output only. The October 14, 2026 approved SBC accounting repair changes consolidated CFO, cash, equity, and the bridge; it does not change the operating forecast, operating FCFF methodology, WACC, or recommendation.
 
-**Deck-export status.** `docs/Decision-Deck.html` has been reconciled to current output and contains eight main slides. The existing PDF is an eight-page prior export, but this environment has no reliable HTML-to-PDF renderer or enabled browser automation, so it was not replaced. It must be re-exported from the revised HTML before being used as the matching PDF deck.
+**Deck-export status.** `docs/Decision-Deck.html` is synchronized to the current output and contains eight main slides. PDF-export status is stated separately in the current repository validation record; the HTML is the controlling presentation artifact unless and until a matching PDF is verified.
 
 ## 1. Current financial conclusions
 
@@ -10,15 +10,15 @@ All figures are USD millions except per-share amounts. The current engine report
 
 | Fiscal year | Revenue | Operating EBIT ex-Financing | Net income | Operating FCFF | Cash | Corporate debt | Balance-sheet check |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 2026 | 70,905.2 | 9,923.6 | 7,385.6 | 7,285.7 | 9,225.7 | 48,940.0 | 0.0 |
-| 2027 | 73,720.3 | 11,294.1 | 8,558.8 | 11,596.2 | 12,515.1 | 48,000.0 | 0.0 |
-| 2028 | 76,610.8 | 12,572.6 | 9,567.4 | 12,917.0 | 16,896.5 | 47,000.0 | 0.0 |
-| 2029 | 79,450.9 | 13,669.7 | 10,428.7 | 13,094.1 | 21,262.5 | 46,000.0 | 0.0 |
-| 2030 | 82,218.9 | 14,717.4 | 11,253.0 | 13,514.1 | 25,865.6 | 45,000.0 | 0.0 |
+| 2026 | 70,905.2 | 9,923.6 | 7,385.6 | 7,285.7 | 10,164.2 | 48,940.0 | 0.0 |
+| 2027 | 73,720.3 | 11,294.1 | 8,558.8 | 11,596.2 | 15,330.6 | 48,000.0 | 0.0 |
+| 2028 | 76,610.8 | 12,572.6 | 9,567.4 | 12,917.0 | 21,589.0 | 47,000.0 | 0.0 |
+| 2029 | 79,450.9 | 13,669.7 | 10,428.7 | 13,094.1 | 27,832.0 | 46,000.0 | 0.0 |
+| 2030 | 82,218.9 | 14,717.4 | 11,253.0 | 13,514.1 | 34,312.1 | 45,000.0 | 0.0 |
 
-The September 1 operating EV is $220,096.1. The full bridge adds $1,450.0 of June 30 Financing equity and $2,419.2 of excess cash/securities, then deducts $48,940.0 of estimated September 1 corporate debt, $1,592.2 of declared-but-unpaid dividend, and $89.0 of NCI. This yields $173,344.1 of common equity, or **$181.95 per 952.7m diluted-share proxy**.
+The September 1 operating EV is $220,096.1. The full bridge adds $1,450.0 of June 30 Financing equity and $2,740.5 of excess cash/securities, then deducts $48,940.0 of estimated September 1 corporate debt, $1,592.2 of declared-but-unpaid dividend, and $89.0 of NCI. This yields $173,665.4 of common equity, or **$182.29 per 952.7m diluted-share proxy**.
 
-Current named cases are unchanged: low **$144.80**, base **$181.95**, and high **$223.94** per share, compared with the September 1 close of **$231.40**. Base WACC is 7.0708%, terminal growth is 2.5%, terminal incremental ROIC is 15%, and terminal PV is 78.06% of operating EV. The reverse DCF solves 3.82% terminal growth at the $231.40 price while holding the 15% ROIC constant.
+Current named cases are low **$145.13**, base **$182.29**, and high **$224.28** per share, compared with the September 1 close of **$231.40**. Base WACC is 7.0708%, terminal growth is 2.5%, terminal incremental ROIC is 15%, and terminal PV is 78.06% of operating EV. The reverse DCF solves 3.815% terminal growth at the $231.40 price while holding the 15% ROIC constant.
 
 ## 2. Assumption-by-assumption challenge
 
@@ -38,15 +38,15 @@ IBM reported approximately $14.7bn of company-defined FCF for FY2025 and stated 
 | Reconciliation item | USD m |
 |---|---:|
 | H1 2026 reported company-defined FCF | 4,760.0 |
-| Model H2 consolidated CFO | 6,154.6 |
+| Model H2 consolidated CFO | 7,093.1 |
 | Less: model H2 Financing-receivable change | 0.0 |
 | Less: model H2 PP&E capex plus capitalized software | (934.9) |
-| Model-derived H2 company-style FCF proxy | 5,219.7 |
-| Model-derived FY2026 company-style FCF proxy | **9,979.7** |
+| Model-derived H2 company-style FCF proxy | 6,158.2 |
+| Model-derived FY2026 company-style FCF proxy | **10,918.2** |
 | Approximate July 22 management-outlook reference | **15,700.0** |
-| Unresolved shortfall versus outlook reference | **(5,720.3)** |
+| Unresolved shortfall versus outlook reference | **(4,781.8)** |
 
-The difference is not resolved by the modeled Financing-receivable line: the H2 forecast assumes no change there. It instead reflects the model's much lower H2 consolidated-CFO/cash-conversion forecast and a metric-definition gap. The model uses $934.9m of H2 PP&E capex plus capitalized software, while IBM's H1 company-defined “net capital investment” was $743m versus $774m of those two reported investment lines; therefore the company metric cannot yet be reproduced by simply summing the two model investment fields. Cash-flow seasonality, model working-capital assumptions, capital-investment classification, and an incomplete reconciliation from consolidated CFO to IBM's company metric can all contribute. The current record cannot allocate the $5.72bn gap among them.
+The approved SBC repair explains $938.5m of the original $5.72bn gap by adding H2 SBC once to CFO, with the same noncash credit to APIC/equity. The remaining difference is not resolved by the modeled Financing-receivable line: the H2 forecast assumes no change there. It instead reflects the model's lower H2 consolidated-CFO/cash-conversion forecast and a metric-definition gap. The model uses $934.9m of H2 PP&E capex plus capitalized software, while IBM's H1 company-defined “net capital investment” was $743m versus $774m of those two reported investment lines; therefore the company metric cannot yet be reproduced by simply summing the two model investment fields. Cash-tax timing, seasonality, model working-capital assumptions, capital-investment classification, and an incomplete reconciliation from consolidated CFO to IBM's company metric can all contribute. The current record cannot allocate the remaining $4.78bn gap among them.
 
 **Definitions:** consolidated CFO is GAAP cash from operations for the consolidated company; company-defined FCF is IBM's CFO measure adjusted for Financing receivables and net capital investment; operating FCFF is the model's unlevered, ex-Financing valuation cash flow and is not management FCF. This unresolved company-defined-FCF shortfall is a **material investment-judgment qualification requiring the student's approval**. The model has not been forced to management guidance.
 
@@ -56,7 +56,7 @@ The observed OAT ranking is gross margin (+$12.20/share for +1pp), software grow
 
 That ranking is **not** a standardized importance ranking. The shocks differ in size and unit: gross margin is +1pp, software growth is +2pp, SG&A is -0.5pp, and tax is -2pp. On a simple per-percentage-point value basis, the displayed effects are approximately $12.20 for gross margin, $4.18 for software growth, $12.28 for SG&A, and $2.61 for tax; this rescaling is illustrative, not a claim that the drivers are economically interchangeable. Documented ranges also differ (gross margin 56%-60%, SG&A 29%-32%, cash tax 14%-20%, software growth 3%-8%). Therefore the official OAT ordering should be described as observed output under named shocks, not as a universal ranking of economic importance.
 
-The WACC/g matrix exceeds $231.40 only in the 6.07% WACC row at 2.5% growth ($243.05) and 3.0% growth ($272.32). The 6.57%/3.0% cell is $229.37. Watch / Defer remains defensible because the base 7.07%/2.5% value is below price, all named causal cases remain below price, the market price implies 3.82% terminal growth at base WACC/ROIC, and key WACC, bridge, and cash-conversion evidence remains qualified.
+The WACC/g matrix exceeds $231.40 only in the 6.07% WACC row at 2.5% growth ($243.39) and 3.0% growth ($272.66). The 6.57%/3.0% cell is $229.71. Watch / Defer remains defensible because the base 7.07%/2.5% value is below price, all named causal cases remain below price, the market price implies 3.815% terminal growth at base WACC/ROIC, and key WACC, bridge, cash-conversion, and future-dilution evidence remains qualified.
 
 ## 5. Peer valuation qualifications
 
@@ -72,11 +72,11 @@ Oracle and Accenture are reference anchors rather than equivalent peers or a ble
 
 ## 7. Proposed Watch / Defer committee rationale
 
-Preserve the student's Watch / Defer recommendation pending approval. At the cutoff price, the base value is $49.45/share lower and even the named high case is $7.46/share lower. A lower-WACC/higher-growth matrix can clear price, but it requires a more favorable steady-state combination than the selected base. The unresolved $5.72bn FY2026 management-style FCF gap, high terminal-value share, and qualified WACC/bridge inputs argue for monitoring rather than initiation. Positive review evidence would be reported support for software growth, margin/SG&A conversion, management-FCF reconciliation, debt/cash conversion, and stronger WACC/bridge evidence.
+The student has retained the Watch / Defer recommendation. At the cutoff price, the base value is $49.11/share lower and even the named high case is $7.12/share lower. A lower-WACC/higher-growth matrix can clear price, but it requires a more favorable steady-state combination than the selected base. The unresolved $4.78bn FY2026 management-style FCF gap, high terminal-value share, future-dilution limitation, and qualified WACC/bridge inputs argue for monitoring rather than initiation. Positive review evidence would be reported support for software growth, margin/SG&A conversion, management-FCF reconciliation, debt/cash conversion, a point-in-time diluted-share count, and stronger WACC/bridge evidence.
 
 ## 8. Questions requiring the student's approval
 
-1. Is the approximately $5.72bn difference between model-derived FY2026 company-style FCF and the July management-outlook reference acceptable as a disclosed qualification, or should the student perform a separate source-level reconciliation before retaining Watch / Defer?
+1. Is the remaining approximately $4.78bn difference between model-derived FY2026 company-style FCF and the July management-outlook reference acceptable as a disclosed qualification, or should the student perform a separate source-level reconciliation before retaining Watch / Defer?
 2. Does the student approve retaining Watch / Defer despite favorable values in the 6.07% WACC / 2.5%-3.0% terminal-growth matrix cells?
 3. Does the student approve the current $0 pension bridge convention pending funded-status and cash-funding reconciliation?
 4. Does the student approve using the $1.450bn Financing book-equity sidecar with no fair-value premium/discount?

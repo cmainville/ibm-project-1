@@ -21,15 +21,15 @@ FY2026 is H1 reported actual plus H2 forecast. December cash/equity start with J
 | Operating EV | $220,096.1 |
 | Terminal PV share | 78.1% |
 
-The bridge rolls June cash through 63/184 of modeled H2 activity to **$8,959.2** estimated September 1 cash. Marketable securities ($960.0), Financing equity ($1,450.0), and NCI ($89.0) remain latest reported June 30 values. Corporate debt is $48,940.0. The $1.69 September 10 declared dividend is a **$1,592.2** payable using June 30 basic shares as proxy and appears once. The selected pension bridge claim is $0 under the documented non-double-counting convention. Base common equity is $173,344.1 and base value is **$181.95 per 952.7m diluted-share proxy**.
+The approved October 14 SBC repair rolls June cash through 63/184 of modeled H2 activity to **$9,280.5** estimated September 1 cash. Marketable securities ($960.0), Financing equity ($1,450.0), and NCI ($89.0) remain latest reported June 30 values. Corporate debt is $48,940.0. The $1.69 September 10 declared dividend is a **$1,592.2** payable using June 30 basic shares as proxy and appears once. The selected pension bridge claim is $0 under the documented non-double-counting convention. Base common equity is $173,665.4 and base value is **$182.29 per 952.7m diluted-share proxy**. SBC is a noncash CFO add-back and APIC/equity credit; it is not added to operating FCFF, and future dilution remains unresolved.
 
 ## Named scenarios and market expectation
 
 | Scenario | Causal description | Value/share |
 |---|---|---:|
-| LOW — Integration and renewal shortfall | weaker Software/Confluent conversion, Consulting recovery failure, Infrastructure weakness, margin pressure, higher tax/investment | $144.80 |
-| BASE — Execution with gradual mix improvement | documented base paths; no probability | $181.95 |
-| HIGH — Software and AI conversion upside | stronger Software/AI conversion, Consulting productivity, favorable mix | $223.94 |
+| LOW — Integration and renewal shortfall | weaker Software/Confluent conversion, Consulting recovery failure, Infrastructure weakness, margin pressure, higher tax/investment | $145.13 |
+| BASE — Execution with gradual mix improvement | documented base paths; no probability | $182.29 |
+| HIGH — Software and AI conversion upside | stronger Software and AI conversion, Consulting productivity, favorable mix | $224.28 |
 
 At the $231.40 September 1 market close, reverse DCF solves **3.82%** terminal growth while holding terminal ROIC at 15%; this exceeds the selected 2–3% terminal-growth sensitivity and is a diagnostic, not a forecast.
 
@@ -44,8 +44,8 @@ Each peer is applied separately. No values are averaged. Differences reflect Ora
 
 ## Tests and remaining work
 
-The recorded run passed 24 tests, including statement articulation, 121/184 boundary, bridge/date/payable controls, terminal ROIC boundaries, peer reconciliations, named scenario ordering, reverse DCF, and a deliberate $1m failure. Start the app with:
+The current run passed 28 tests, including statement articulation, 121/184 boundary, bridge/date/payable controls, terminal ROIC boundaries, peer reconciliations, named scenario ordering, reverse DCF, and four SBC controls for one CFO add-back/APIC credit, no H1/H2 double count, no SBC addition to operating FCFF, and bridge-only valuation movement. Start the app with:
 
 `python3 app/server.py --port 8765`
 
-Remaining load-bearing limitations: reproducible cutoff-dated beta; IBM-specific September 1 bond yield; August 10 share count; full pension funded-status/current-liability reconciliation; independently sourced cash taxes; primary-filing quantification of all base-year tax/discrete items; and course training-case answers. The human-only Locked Changed-Input Record experiment was completed October 10, 2026; its BEFORE/AFTER records and screenshots remain preserved in `docs/`.
+Remaining load-bearing limitations: reproducible cutoff-dated beta; IBM-specific September 1 bond yield; August 10 share count and future SBC dilution; full pension funded-status/current-liability reconciliation; independently sourced cash taxes; and the $4.782bn FY2026 company-style FCF proxy shortfall versus the July management-outlook reference. The human-only Locked Changed-Input Record experiment was completed October 10, 2026; its BEFORE/AFTER records and screenshots remain preserved in `docs/` as historical pre-SBC evidence.
