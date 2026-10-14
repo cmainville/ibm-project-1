@@ -1,0 +1,66 @@
+SUPPLEMENTAL LOCKED CHANGED-INPUT RECORD — AFTER
+
+Part A — Human prediction (preserved verbatim from the committed BEFORE record)
+
+Human prediction date and time: 10/14 @ 5:18pm
+
+Tested baseline Git commit: a2084eaddc466784f27a6187139615be08099d5f
+
+Prediction-file pre-run Git commit (record separately after committing):
+
+Driver name and units: Consulting revenue-growth shift, percentage points
+
+Old driver value: 0 percentage points
+
+New driver value: -1 percentage points
+
+Why the change is economically meaningful: Consulting is one of IBM's main operating segments and weaker demand could reduce projected sales and profitability.
+
+Expected revenue direction: Lower
+
+Expected operating-profit direction: Lower
+
+Expected FCFF direction: Lower
+
+Expected intrinsic-value direction: Lower
+
+Expected investment-decision effect: Watch/Defer
+
+Reason for the prediction: Lower forecast operating cash flows would generally lower discounted operating value for IBM.
+
+
+Part B — Observed results (objective execution record)
+
+Prediction-file pre-run Git commit: c5a999f5942b3220bd085c59b3f4d6e9a872d587
+Prediction-file Git commit timestamp: 2026-10-14T17:22:31-04:00
+Execution start timestamp: 2026-10-14T17:25:03-04:00
+
+Driver applied: consulting_growth_shift, percentage-point shift to FY2027–2030 Consulting revenue growth.
+Actual old/new values: 0.00pp / -1.00pp.
+
+All monetary values are USD millions except per-share values.
+
+Metric                              Baseline             Changed              Change
+FY2030 total revenue                $82,218.920          $81,296.371          $-922.549
+FY2030 operating EBIT               $14,717.413          $14,550.431          $-166.981
+FY2030 operating FCFF               $13,514.090          $13,329.082          $-185.008
+WACC                                7.070782%            7.070782%            0.000000pp
+Intrinsic value per share           $182.287630          $179.793423          $-2.494207 (-1.368281%)
+
+Financial-statement integrity: statement articulation PASS for baseline, changed, and reset API results.
+Decision and market comparison: the changed $179.793423/share value remains below the $231.40 reference price; API status remained WATCH / DEFER.
+Expected-versus-observed directions: the recorded expected directions (lower revenue, operating profit, FCFF, and intrinsic value) were observed. The recorded Watch/Defer decision effect was also observed as unchanged.
+
+Reset evidence: POST /api/analysis with consulting_growth_shift 0 returned $182.287630/share, exactly matching the tested baseline. API low/high cases after reset were $145.1346/$224.2811 per share; both articulated PASS.
+Test evidence: `python3 -m unittest discover -s tests -v` completed 30 tests, 0 failures on October 14, 2026.
+Execution commands: GET /api/analysis for baseline; POST /api/analysis with {"overrides":{"consulting_growth_shift":-0.01}} for the changed case; POST /api/analysis with {"overrides":{"consulting_growth_shift":0}} for reset.
+
+Student-authored evaluation:
+
+1. Did the results match my prediction, and why?
+
+Yes, the results matched my prediction. Decreasing IBM's consulting revenue growth by 1 percentage point reduced projected revenue, operating profit, and FCFF. This lowered the intrinsic value from $182.29 to $179.79 per share, a decrease of approximately $2.49 (1.37%). The results support my reasoning that weaker Consulting growth would reduce future operating cash flows and the discounted value of IBM.
+
+2. Did the result change my Watch / Defer recommendation, and why?
+
+No, my recommendation remains Watch / Defer. The lower Consulting growth assumption reduced IBM's intrinsic value to $179.79, further below its September 1 market price of $231.40. This reinforces my decision not to initiate a position because the valuation does not provide a sufficient margin of safety. I would reconsider the investment if stronger operating performance and cash-flow evidence supported a more attractive valuation.

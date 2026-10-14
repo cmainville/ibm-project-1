@@ -48,7 +48,7 @@ Forecast SBC is assumed embedded in the forecast operating-cost ratios that dete
 | Scenarios | Low < base < high | PASS: $145.13 < $182.29 < $224.28 | `test_cases_reverse_dcf_and_named_scenario_order` |
 | September 1 timing | Future stub is 121/184 of H2 FCFF, beginning September 2 | PASS: $4,791.1m residual FCFF | `test_dates_and_correct_stub_convention`; `test_residual_fcff_uses_h2` |
 | Deliberate integrity failure | A $1m FY2027 cash break fails without altering inputs | PASS: `SAFE FAILURE DEMONSTRATION: detected as intended — FY2027 balance-sheet check failed: $-1.0000m` | `python3 model/ibm_phase3_model.py --write-output --demo-failure` |
-| Recovery | A subsequent normal model build remains articulated | PASS; normal 28-test run and regenerated output completed | same task-run commands |
+| Recovery | A subsequent normal model build remains articulated | PASS; the historical recovery run at that review stage had 28 tests. The final current suite has 30 tests and passed in full. | same task-run commands; complete current result below |
 | SBC controls | One CFO add-back/APIC credit, no H1/H2 double count, no operating-FCFF add-back, bridge-only valuation movement | PASS | four SBC tests listed below |
 
 Commands executed during this task:
@@ -83,6 +83,38 @@ The original locked files and screenshots are preserved unchanged at `docs/locke
 
 **Provenance.** The original predecessor repository `ibm-project-1-b` is reported to contain historical prediction commit `7359ba2`; that object is not available in this repository, so it is not independently verified here. This repository contains archived BEFORE commit `4591725d61928b40a62ea42d5f3a08bd38fabdf1`, committed October 10, 2026 at 18:21:56 -04:00, and results/screenshots commit `2f2384a`. The archived commit time is a later GitHub preservation event, not the original 12:39pm pre-run prediction timestamp. The SBC repair occurred afterward and changed the current base case to $182.29/share; it does not rewrite this historical experiment.
 
+## 4A. Supplemental prospective Locked Changed-Input Record — current model
+
+This supplemental validation is separate from, and does not replace, the October 10 historical experiment. The student declared that Part A was independently written with generative AI assistance and autocomplete off before execution. The committed BEFORE file is `docs/supplemental-locked-test-before.txt` at Git commit `c5a999f5942b3220bd085c59b3f4d6e9a872d587` (October 14, 2026, 17:22:31 -04:00). The completed objective record and student evaluation are in `docs/supplemental-locked-test-after.txt`.
+
+**Human-authored Part A prediction (verbatim):**
+
+> Human prediction date and time: 10/14 @ 5:18pm
+> Tested baseline Git commit: a2084eaddc466784f27a6187139615be08099d5f
+> Driver name and units: Consulting revenue-growth shift, percentage points
+> Old driver value: 0 percentage points
+> New driver value: -1 percentage points
+> Why the change is economically meaningful: Consulting is one of IBM's main operating segments and weaker demand could reduce projected sales and profitability.
+> Expected revenue direction: Lower
+> Expected operating-profit direction: Lower
+> Expected FCFF direction: Lower
+> Expected intrinsic-value direction: Lower
+> Expected investment-decision effect: Watch/Defer
+> Reason for the prediction: Lower forecast operating cash flows would generally lower discounted operating value for IBM.
+
+Part B was blank in commit `c5a999f` and the BEFORE file remained unchanged before execution.
+
+| Item | Verified supplemental evidence |
+|---|---|
+| Execution | Started October 14, 2026, 17:25:03 -04:00. Existing local API: GET `/api/analysis`; POST `{"overrides":{"consulting_growth_shift":-0.01}}`; POST with `0` for reset. |
+| FY2030 revenue / operating EBIT / operating FCFF | Baseline $82,218.920m / $14,717.413m / $13,514.090m; changed $81,296.371m / $14,550.431m / $13,329.082m; changes $(922.549)m / $(166.981)m / $(185.008)m. |
+| WACC and intrinsic value | WACC unchanged at 7.070782%. Value $182.287630 to $179.793423 per share: $(2.494207), or -1.368281%. |
+| Integrity, decision, and reset | Baseline, changed, and reset API results articulated PASS. Changed value remained below $231.40 and status remained Watch / Defer. Reset returned exactly $182.287630; low/high after reset were $145.1346/$224.2811 and articulated PASS. |
+| Expected-versus-observed / student conclusion | The observed directions matched the pre-run prediction. The student wrote: “Yes, the results matched my prediction” because weaker Consulting growth reduced projected revenue, operating profit, FCFF, and discounted value; and “No, my recommendation remains Watch / Defer” because $179.79 remained further below $231.40 and did not provide sufficient margin of safety. |
+| Tests | `python3 -m unittest discover -s tests -v`: 30 passed, 0 failed. |
+
+The Git precommit, blank committed Part B, later execution time, reset, and objective observations make this **VERIFIED** prospective precommit evidence. This verification does not retroactively confer the same precommit verification on the original October 10 record.
+
 ## 5. AI-use record and independently checked corrections
 
 Exact model/version identifiers and individual interaction timestamps were not retained and are not claimed. Dates below are documented work dates or defensible October 2026 ranges. AI assistance is not itself independent evidence; the student owns the investment decision, approved assumptions, and all final claims.
@@ -100,11 +132,11 @@ The published answers are a required reference for the known-answer validation, 
 
 ## 6. Remaining limitations, monitoring conditions, and escalation
 
-- The approximately $4.782bn management-FCF reconciliation gap remains unresolved. It may reflect cash-tax timing, Financing-receivable movement, working-capital seasonality, and nonidentical net-capital-investment definitions. It was not forced to guidance.
+- The approximately $4.782bn management-FCF reconciliation gap remains unresolved. IBM company-defined FCF begins with consolidated CFO and adjusts Financing receivables and net capital investment, whereas the DCF uses EBIT-based operating FCFF that excludes IBM Financing and applies an operating tax/reinvestment convention. They are therefore different measures, not interchangeable targets. The management outlook was not forced into the forecast because the source-level bridge remains incomplete; doing so would conceal, rather than resolve, the analytical difference. The gap weakens the case for immediate initiation and requires re-underwriting if subsequent results disclose cash taxes, Financing-receivable movements, working-capital seasonality, net capital investment, or management-FCF reconciliation that materially contradicts the base path.
 - Future dilution and a September 1 point-in-time diluted-share count are unresolved. SBC is economically costly to existing shareholders even though it is noncash in the period.
 - Beta is a qualified third-party indication; the cost of debt is a single-A OAS proxy rather than an IBM-specific September 1 borrowing yield.
 - Terminal PV represents 78.06% of operating EV. Pension receives no incremental bridge deduction pending a funded-status/cash-funding reconciliation. IBM Financing uses a June 30 book-equity sidecar with no demonstrated fair-value premium or discount.
-- Escalate or re-underwrite if reported software growth, gross-margin/SG&A conversion, management-FCF reconciliation, debt/cash conversion, dilution evidence, or dated WACC evidence materially contradicts the base path. The approved action remains Watch / Defer.
+- Even favorable Software-growth cases remain below the $231.40 reference price under the named causal scenarios. Qualified beta and debt-yield inputs, 78.06% terminal-value dependence, and unresolved future dilution reduce confidence in favorable valuation outcomes. Escalate or re-underwrite if reported software growth, gross-margin/SG&A conversion, management-FCF reconciliation, debt/cash conversion, dilution evidence, or dated WACC evidence materially contradicts the base path. The approved action remains Watch / Defer.
 
 ## 7. Known-answer training-case status
 
@@ -120,6 +152,7 @@ The final Validation and AI Use PDF was regenerated from `docs/validation-and-ai
 - All 12 published Week 3 DCF reconciliations and the 10%-to-11% WACC sensitivity verification.
 - IBM's revised $182.29 per-share base valuation (with $145.13 low and $224.28 high cases).
 - The historical Locked Changed-Input Record ($181.95 to $190.31 per share).
+- The separately verified supplemental prospective Consulting-growth test and its student-authored evaluation.
 - AI-use disclosures and the unresolved approximately $4.78bn FY2026 management-FCF reconciliation gap, dilution, WACC, terminal-value, pension, and IBM Financing limitations.
 
 This PDF was generated from the corresponding HTML validation record. The Markdown source provides additional supporting detail.

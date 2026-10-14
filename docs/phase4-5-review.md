@@ -44,7 +44,7 @@ Each peer is applied separately. No values are averaged. Differences reflect Ora
 
 ## Tests and remaining work
 
-The current run passed 28 tests, including statement articulation, 121/184 boundary, bridge/date/payable controls, terminal ROIC boundaries, peer reconciliations, named scenario ordering, reverse DCF, and four SBC controls for one CFO add-back/APIC credit, no H1/H2 double count, no SBC addition to operating FCFF, and bridge-only valuation movement. Start the app with:
+At this earlier Phase 4-5 review stage, the current run passed 28 tests, including statement articulation, 121/184 boundary, bridge/date/payable controls, terminal ROIC boundaries, peer reconciliations, named scenario ordering, reverse DCF, and four SBC controls for one CFO add-back/APIC credit, no H1/H2 double count, no SBC addition to operating FCFF, and bridge-only valuation movement. The final project-wide suite later expanded to 30 tests; see `docs/validation-and-ai-use.md`. Start the app with:
 
 `python3 app/server.py --port 8765`
 
