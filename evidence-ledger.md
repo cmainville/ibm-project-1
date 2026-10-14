@@ -48,6 +48,7 @@
 | Q2 segment revenue growth | Software 5.1%; Consulting 0.2%; Infrastructure -7.4%; Financing 12.2% | YoY reported | Three months ended June 30, 2026 | July 23, 2026 | Same 10-Q, segment view p. 12 | Yes | Evidence, not management guidance. |
 | FY2026 constant-currency revenue outlook | 4%–5% | Management outlook | FY2026 | July 22, 2026 | [IBM Q2 2026 release](https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS), Full-Year 2026 Expectations | Yes | Company outlook; a driver constraint, not an independent forecast. |
 | FY2026 free-cash-flow outlook | about $1bn YoY increase | Management outlook | FY2026 | July 22, 2026 | Same release, Full-Year 2026 Expectations | Yes | Company outlook; model must disclose FCF definition and Financing treatment. |
+| H1 management-defined FCF reconciliation | 4,760 | USD m; CFO less Financing-receivable adjustment and net capital investment | Six months ended June 30, 2026 | July 22/23, 2026 | Q2 release and Q2 10-Q, Liquidity and Capital Resources: 7,766 − 2,264 − 743 = 4,759, rounded to 4,760 | Yes | Independently recomputed in `docs/independent-source-check.md`. Do not add the Financing adjustment twice or equate this measure to operating FCFF. |
 
 ## Market inputs — September 1 close
 

@@ -41,3 +41,11 @@ These are the student's observed results recorded from screenshots, not results 
 - **Results:** all **30 tests passed, 0 failures**. The base API value was **$182.287630/share**, statement articulation was `PASS`, and the residual FY2026 fraction was **121/184** (`0.6576086957`). The +2pp backend Software-growth override returned **$190.647402/share**, above the new base; empty overrides restored **$182.287630/share**.
 - **Failure and recovery:** the deliberate FY2027 $1m cash break was detected exactly as intended: `SAFE FAILURE DEMONSTRATION: detected as intended — FY2027 balance-sheet check failed: $-1.0000m`. The subsequent normal API requests and test suite passed, confirming recovery.
 - **Static output:** `output/visible-base-output.html` was generated successfully in the isolated copy and is available without starting Python. It was not represented as interactive.
+
+## October 14, 2026 high-risk isolated-copy validation extension
+
+- **Method and source state:** an isolated local clone of `c6cce9edcfd3aac8ec940269aac945930bfbb86e` received the reviewed staged diagnostic/documentation patch before its final commit. This accurately identifies the source commit plus tested patch; it does not claim a future commit hash existed during the test.
+- **Environment and scope:** macOS `python3`, standard library only; `/private/tmp/ibm-high-risk-cold-20261014/repo`. API/static-file validation only—no graphical browser or Mac-launcher operation was performed or claimed.
+- **Commands:** `python3 -m unittest discover -s tests -v`; `python3 model/ibm_phase3_model.py --write-output --demo-failure`; `python3 app/server.py --write-static`; `python3 app/server.py --port 8785`; API baseline, +2pp Software override, empty-override reset, and +4pp out-of-bounds requests.
+- **Results:** **35 tests passed, 0 failed**. Baseline API: **$182.287630/share**, articulation `PASS`; +2pp Software: **$190.647402/share**, `PASS`; reset: **$182.287630/share**, `PASS`. The +4pp request correctly returned HTTP 400: `Growth shift outside ±3% control bound`.
+- **Failure/recovery and static output:** the existing deliberate $1m FY2027 balance-sheet failure was detected during the model command; normal API/test requests subsequently passed. `output/visible-base-output.html` was regenerated (5,970 bytes) and contains the $182.29 base label for standalone opening.

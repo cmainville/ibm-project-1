@@ -28,6 +28,7 @@ The final connected model uses USD millions except per-share data. The valuation
 | H1 2026 history and SBC | [IBM Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/51143/000005114326000078/ibm-20260630.htm), filed July 23, 2026. It anchors the June 30 balance sheet, H1 results, $7,766m consolidated CFO, and $1,004m H1 SBC noncash adjustment. |
 | FY2025 history | [IBM FY2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231_d2.htm), filed February 24, 2026. It provides FY2025 history and $1,715m SBC; $842m H1 SBC implies $873m H2 2025 SBC. |
 | H1 management-defined FCF | $7,766m GAAP CFO - $2,264m Financing-receivable adjustment - $743m net capital investment = $4,759m, rounding to the reported $4.760bn. Consolidated CFO, IBM company-defined FCF, and operating FCFF are distinct measures. |
+| FCF definition / period check | The Q2 10-Q definition and H1 reconciliation were independently recomputed; the H2 model proxy is then kept separate from IBM guidance. See `docs/fy2026-fcf-source-reconciliation.md`. |
 | Independent historical-anchor check | IBM's Q2 2026 Form 10-Q, filed July 23, 2026: reported H1 segment revenue reconstructs to Software $14,813m + Consulting $10,599m + Infrastructure $7,161m + Financing $406m + Other $100m = $33,079m. This equals the model's H1 consolidated revenue anchor; difference $0m. See `docs/independent-source-check.md`. |
 | SBC schedule | H2 2026: $938.5m, the midpoint of reported H1 2026 $1,004m and historical H2 2025 $873m. FY2027-30: $1,877m annually, provisional and held flat. |
 | September 1 price, dividend, WACC, peers | Cutoff-dated records and source URLs are retained in `evidence-ledger.md`; calculation definitions are in `model/valuation.py`. |
@@ -38,7 +39,7 @@ Forecast SBC is assumed embedded in the forecast operating-cost ratios that dete
 
 | Check | Expected result | Actual result | Evidence |
 |---|---|---|---|
-| Full automated suite | 30 passing tests | **30 passed, 0 failed** | Command below; `tests/` |
+| Full automated suite at final-documentation baseline | 30 passing tests | **30 passed, 0 failed** | Command below; `tests/` |
 | Published Week 3 known-answer case | All 12 published outputs reconcile; 11% WACC decreases value and 10% restores baseline | **PASS:** all 12 within tolerance; $23.4140/share at 11%; $27.4974/share restored at 10% | `test_week3_dcf_benchmark.py`; `docs/week3-known-answer-reconciliation.md` |
 | Three-statement articulation | All balance-sheet and cash-flow gaps equal zero | PASS; FY2026-30 balance-sheet gaps were 0.0 within floating-point rounding | `test_all_years_articulate`; model run |
 | Historical-source reconciliation | Opening balance, segment revenue, and pretax bridges reconcile; H1 FCF rounds to $4,760m | PASS: 0 / 0 / 0.0 gaps; $4,759m calculated, $(1)m rounding difference | `test_historical_base`; model output |
@@ -48,8 +49,10 @@ Forecast SBC is assumed embedded in the forecast operating-cost ratios that dete
 | Scenarios | Low < base < high | PASS: $145.13 < $182.29 < $224.28 | `test_cases_reverse_dcf_and_named_scenario_order` |
 | September 1 timing | Future stub is 121/184 of H2 FCFF, beginning September 2 | PASS: $4,791.1m residual FCFF | `test_dates_and_correct_stub_convention`; `test_residual_fcff_uses_h2` |
 | Deliberate integrity failure | A $1m FY2027 cash break fails without altering inputs | PASS: `SAFE FAILURE DEMONSTRATION: detected as intended — FY2027 balance-sheet check failed: $-1.0000m` | `python3 model/ibm_phase3_model.py --write-output --demo-failure` |
-| Recovery | A subsequent normal model build remains articulated | PASS; the historical recovery run at that review stage had 28 tests. The final current suite has 30 tests and passed in full. | same task-run commands; complete current result below |
+| Recovery | A subsequent normal model build remains articulated | PASS; the historical recovery run at that review stage had 28 tests; the final-documentation baseline had 30. The current high-risk extension has 35 tests and passed in full. | same task-run commands; complete current result below |
 | SBC controls | One CFO add-back/APIC credit, no H1/H2 double count, no operating-FCFF add-back, bridge-only valuation movement | PASS | four SBC tests listed below |
+| Independent DCF / bridge recalculation | Separate arithmetic reproduces timing, WACC, terminal reinvestment, EV and equity bridge | PASS: $220,096.1069m EV, $173,665.4251m equity, $182.287630/share | `scripts/high_risk_diagnostics.py`; `test_independent_dcf_ties_out_without_production_dcf_call` |
+| High-risk definition / failure controls | Period-correct H1/H2 FCF boundary plus terminal and bridge invalid-input rejection | PASS | `tests/test_high_risk_validation.py`; `docs/high-risk-validation-evidence.md` |
 
 Commands executed during this task:
 
@@ -62,9 +65,19 @@ curl -sS http://127.0.0.1:8770/api/analysis
 
 The localhost API returned `statement_articulation: PASS` and `$182.287630` base value. This task did not repeat a fresh GitHub download. The October 14 fresh-download and launcher evidence is historical student-observed evidence in `docs/cold-run-log.md`: the launcher used port 8768 when 8765 was occupied; the then-pre-SBC base was $181.95; and the recorded API/run evidence used 24 tests. It must not be represented as a task-run result for the final SBC model.
 
-### Complete 30-test result list
+### Complete 30-test result list at the final-documentation baseline
 
 All returned `ok`: the 28 IBM tests listed in the prior record, plus `test_published_twelve_outputs` and `test_wacc_sensitivity_decreases_value_and_baseline_restores` in `test_week3_dcf_benchmark.py`.
+
+### Post-baseline high-risk validation extension
+
+Five nonredundant tests were then added to test a separate DCF/bridge
+calculation path, source-defined FCF period boundary, terminal-reinvestment
+guardrail, operating-cash bridge guardrail, and articulated material Consulting
+shock. The current project suite is therefore **35 tests**; its actual final
+run is recorded in `docs/high-risk-validation-evidence.md` and
+`docs/cold-run-log.md`. This update does not recharacterize the historical
+28-test recovery run or the final-documentation 30-test record.
 
 ## 4. Historical Locked Changed-Input Record: preserve, do not restate as current
 
@@ -132,7 +145,7 @@ The published answers are a required reference for the known-answer validation, 
 
 ## 6. Remaining limitations, monitoring conditions, and escalation
 
-- The approximately $4.782bn management-FCF reconciliation gap remains unresolved. IBM company-defined FCF begins with consolidated CFO and adjusts Financing receivables and net capital investment, whereas the DCF uses EBIT-based operating FCFF that excludes IBM Financing and applies an operating tax/reinvestment convention. They are therefore different measures, not interchangeable targets. The management outlook was not forced into the forecast because the source-level bridge remains incomplete; doing so would conceal, rather than resolve, the analytical difference. The gap weakens the case for immediate initiation and requires re-underwriting if subsequent results disclose cash taxes, Financing-receivable movements, working-capital seasonality, net capital investment, or management-FCF reconciliation that materially contradicts the base path.
+- The approximately $4.782bn management-FCF reconciliation gap remains unresolved. IBM company-defined FCF begins with consolidated CFO and adjusts Financing receivables and net capital investment, whereas the DCF uses EBIT-based operating FCFF that excludes IBM Financing and applies an operating tax/reinvestment convention. They are therefore different measures, not interchangeable targets. The source-defined H1 arithmetic ties; the model’s H2 proxy has a $1.642bn taxes-payable draw, $1.639bn operating-asset use, $934.9m capital investment, and zero modeled Financing-receivable movement, but IBM did not disclose an H2 component bridge. The management outlook was not forced into the forecast because that would conceal, rather than resolve, the analytical difference. See `docs/fy2026-fcf-source-reconciliation.md`.
 - Future dilution and a September 1 point-in-time diluted-share count are unresolved. SBC is economically costly to existing shareholders even though it is noncash in the period.
 - Beta is a qualified third-party indication; the cost of debt is a single-A OAS proxy rather than an IBM-specific September 1 borrowing yield.
 - Terminal PV represents 78.06% of operating EV. Pension receives no incremental bridge deduction pending a funded-status/cash-funding reconciliation. IBM Financing uses a June 30 book-equity sidecar with no demonstrated fair-value premium or discount.
@@ -146,9 +159,10 @@ This resolves the course's published Week 3 known-answer check. It does not repr
 
 ## 8. PDF status
 
-The final Validation and AI Use PDF was regenerated from `docs/validation-and-ai-use.html` on October 14, 2026, following visual and text-extraction validation. It includes:
+The final Validation and AI Use PDF was regenerated from `docs/validation-and-ai-use.html` on October 14, 2026, following six-page visual and text-extraction validation. It includes:
 
-- The 30-test validation result, with 0 failures.
+- The historical 30-test final-documentation record and the current 35-test result, with 0 failures.
+- The independent DCF/bridge tie-out, period-correct H1/H2 FCF definition check, and targeted terminal/bridge failure controls.
 - All 12 published Week 3 DCF reconciliations and the 10%-to-11% WACC sensitivity verification.
 - IBM's revised $182.29 per-share base valuation (with $145.13 low and $224.28 high cases).
 - The historical Locked Changed-Input Record ($181.95 to $190.31 per share).

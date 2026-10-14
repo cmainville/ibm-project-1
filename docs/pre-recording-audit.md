@@ -12,7 +12,7 @@
 | Peer consistency, scenarios, OAT sensitivities, range dependence and reverse DCF | PASS | `docs/stage2-investment-review.md`, deck, valuation tests | Peer comparability remains qualified. |
 | Interactive controls, bounds/reset, broken-input recovery | PASS | app/API cold run; validation record; tests | None identified. |
 | Published Week 3 known-answer reconciliation | PASS | `docs/week3-known-answer-reconciliation.md`, 2 benchmark tests | Conventional DCF only; not an IBM-engine end-to-end test. |
-| Independent source/definition check | PASS | `docs/independent-source-check.md`, validation record | Dividend and H1 2026 $33,079m revenue reconstruction pass; management-FCF proxy gap remains unresolved. |
+| Independent source/definition check | CORRECTED | `docs/independent-source-check.md`, `docs/fy2026-fcf-source-reconciliation.md` | Dividend, H1 $33,079m revenue, and H1 $4,759m management-FCF definition arithmetic pass; H2/FY management component bridge remains unresolved. |
 | Historical Locked Changed-Input Record | PASS | locked text, screenshots, Validation Appendix A | Historical pre-SBC result is correctly separated from current model. |
 | Supplemental prospective Locked Changed-Input Record | VERIFIED | `docs/supplemental-locked-test-before.txt`, `docs/supplemental-locked-test-after.txt`, commit `c5a999f` | Student-authored Part A was committed with Part B blank before execution; original October 10 record is not represented as independently precommitted. |
 | Full AI-use disclosure | CORRECTED | `docs/validation-and-ai-use.*` | Student remains responsible for final presentation claims; exact model/version and individual timestamps are unavailable. |
@@ -21,7 +21,7 @@
 | Saved visible executed output | PASS | `output/visible-base-output.html` | Static output is read-only, not interactive. |
 | Research Evolution and Edition A checkpoint | PENDING INSTRUCTOR DETERMINATION | `docs/Research-Evolution.*`, `docs/edition-a-checkpoint-status.md` | Lab 03 attempt/grade does not prove submission to the separate ungraded checkpoint; instructor response pending. |
 | Eight-slide decision deck | PASS | `docs/Decision-Deck.*` | None identified. |
-| HTML/PDF/Markdown/model consistency | PASS | PDF checks and current audit | Future edits require re-export. |
+| HTML/PDF/Markdown/model consistency | CORRECTED | `docs/validation-and-ai-use.*`, six-page PDF visual/text check, current audit | Validation PDF now includes the current 35-test and high-risk-extension evidence; future edits still require re-export. |
 | Videos, transcripts, manifest, Brightspace submission | DEFERRED UNTIL RECORDING / SUBMISSION STAGE | Submission architecture | Student action required after recordings; do not create now. |
 
 ## Final audit limitations
@@ -37,8 +37,8 @@ Brightspace rubric category titles and points were supplied by the student. This
 | Brightspace criterion | Points | Status | Evidence and limitation |
 |---|---:|---|---|
 | Problem Definition and Decision Usefulness | 45 | QUALIFIED | `README.md`, Research Evolution, and Decision Deck define the no-current-position committee user, September 1 cutoff, valuation range, Watch / Defer decision, and monitoring conditions. The separate Edition A checkpoint remains PENDING INSTRUCTOR DETERMINATION, so complete compliance is not implied. |
-| Data Integrity and Traceability | 45 | QUALIFIED | `evidence-ledger.md`, primary filings, `docs/independent-source-check.md`, and normalization records provide traceability. WACC inputs, diluted shares, pension, Financing fair value, and management-FCF reconciliation remain qualified. |
-| Financial Soundness and Judgment | 60 | QUALIFIED | Linked statements, DCF, bridge, scenarios, reverse DCF, peer qualifications, and final judgment are documented. The $4.78bn FCF proxy gap and terminal-value dependence remain material limitations. |
+| Data Integrity and Traceability | 45 | QUALIFIED | `evidence-ledger.md`, `docs/load-bearing-input-verification.md`, primary filings, and `docs/independent-source-check.md` now provide source-to-model lineage and an independently recomputed FCF definition. WACC inputs, diluted shares, pension, Financing fair value, and the undisclosed H2 management-FCF bridge remain qualified. |
+| Financial Soundness and Judgment | 60 | QUALIFIED | Linked statements, independent DCF/bridge replication, scenarios, reverse DCF, peer qualifications, and explicit reversal triggers are documented in `docs/investment-judgment-and-reversal-triggers.md`. The $4.78bn FCF proxy gap and terminal-value dependence remain material limitations. |
 | Technical Execution and Usability | 45 | PASS | `README.md`, `ENVIRONMENT.md`, app server, static visible output, bounded controls, reset, and isolated-copy cold-run record support reproducibility. |
-| Validation, Sensitivity and Reproducibility | 75 | QUALIFIED | 30 tests, deliberate failure/recovery, Week 3 known-answer benchmark, AI-output checks, cold run, decision-relevant limitations, and the **VERIFIED** supplemental prospective precommit are documented. Separate Edition A checkpoint status remains pending instructor determination. |
+| Validation, Sensitivity and Reproducibility | 75 | QUALIFIED | The historical final-documentation baseline had 30 tests; the current suite adds five independent high-risk tests (35 total), with terminal/bridge failure injections, source-boundary testing, AI-output checks, cold run, decision-relevant limitations, and **VERIFIED** supplemental prospective precommit. Separate Edition A checkpoint status remains pending instructor determination. |
 | Professional Communication | 30 | QUALIFIED | Eight-slide deck, Research Evolution, validation record, PDFs, and this audit are synchronized. Recordings, transcripts, manifest, and Brightspace package remain deferred until the submission stage. |
