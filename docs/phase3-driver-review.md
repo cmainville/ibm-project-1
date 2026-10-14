@@ -14,7 +14,7 @@ FY2026 starts with reported H1 actual segment revenue. H2 uses each segment’s 
 | Financing | 406 | FY2025 H2/H1 seasonality | 2.0% | 2.0% | 2.0% | 2.0% | -3%–4% | Separate sidecar; revenue is not used in operating FCFF. | Financing receivables, credit losses, funding mix, and return on equity. |
 | Other | 100 | FY2025 H2/H1 seasonality | 0.0% | 0.0% | 0.0% | 0.0% | n/m; immaterial | Kept flat after FY2026 for transparency. | A material disclosed recurring component. |
 
-**H2 / residual-FY2026 timing:** no monthly segment cash-flow seasonality is available in the evidence packet. The model therefore uses FY2025 H2/H1 revenue ratios for full FY2026 and a disclosed proportional convention for valuation: 122 of 184 H2 days (66.3%) are after September 1. This is deliberately a provisional allocation and must be stress-tested before Phase 4.
+**H2 / residual-FY2026 timing:** no monthly segment cash-flow seasonality is available in the evidence packet. The model therefore uses FY2025 H2/H1 revenue ratios for full FY2026 and a disclosed proportional convention for valuation: 121 of 184 H2 days (65.8%) are after the September 1 close, beginning September 2. The former 122/184 wording is superseded; it is retained in the Phase 4-5 review as historical correction evidence only.
 
 ## Cost, profit, and cash-tax drivers
 

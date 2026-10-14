@@ -48,4 +48,4 @@ The recorded run passed 24 tests, including statement articulation, 121/184 boun
 
 `python3 app/server.py --port 8765`
 
-Remaining load-bearing limitations: reproducible cutoff-dated beta; IBM-specific September 1 bond yield; August 10 share count; full pension funded-status/current-liability reconciliation; independently sourced cash taxes; primary-filing quantification of all base-year tax/discrete items; and course training-case answers. The Locked Changed-Input Record remains intentionally incomplete.
+Remaining load-bearing limitations: reproducible cutoff-dated beta; IBM-specific September 1 bond yield; August 10 share count; full pension funded-status/current-liability reconciliation; independently sourced cash taxes; primary-filing quantification of all base-year tax/discrete items; and course training-case answers. The human-only Locked Changed-Input Record experiment was completed October 10, 2026; its BEFORE/AFTER records and screenshots remain preserved in `docs/`.
