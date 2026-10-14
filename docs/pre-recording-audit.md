@@ -27,7 +27,7 @@
 
 - FY2026 company-style FCF proxy remains approximately $4.78bn below the management-outlook reference; it was not forced to guidance.
 - Future dilution, point-in-time diluted shares, IBM-specific borrowing cost, pension treatment, and Financing fair value remain qualified.
-- The actual partner exchange is a student-reported retrospective recollection; the partner identity, date, and original notes are unavailable. No Lab 12 peer-review evidence exists because the student was absent.
+- The actual partner exchange is a student-reported retrospective recollection with Mrigna Goel identified as the challenger; the exact date and contemporaneous notes are unavailable. No Lab 12 peer-review evidence exists because the student was absent.
 
 ## Published-criteria evidence review
 
@@ -35,7 +35,7 @@ The detailed analytic rubric is not available in this workspace or publicly veri
 
 | Published criterion | Status | Evidence and limitation |
 |---|---|---|
-| Problem Definition and Decision Usefulness | PASS | `README.md`, Research Evolution, and Decision Deck define the no-current-position committee user, September 1 cutoff, valuation range, Watch / Defer decision, and monitoring conditions. |
+| Problem Definition and Decision Usefulness | QUALIFIED | `README.md`, Research Evolution, and Decision Deck define the no-current-position committee user, September 1 cutoff, valuation range, Watch / Defer decision, and monitoring conditions. The separate Edition A checkpoint remains PENDING INSTRUCTOR DETERMINATION, so complete compliance is not implied. |
 | Data Integrity and Traceability | QUALIFIED | `evidence-ledger.md`, primary filings, `docs/independent-source-check.md`, and normalization records provide traceability. WACC inputs, diluted shares, pension, Financing fair value, and management-FCF reconciliation remain qualified. |
 | Financial Soundness and Judgment | QUALIFIED | Linked statements, DCF, bridge, scenarios, reverse DCF, peer qualifications, and final judgment are documented. The $4.78bn FCF proxy gap and terminal-value dependence remain material limitations. |
 | Technical Execution and Usability | PASS | `README.md`, `ENVIRONMENT.md`, app server, static visible output, bounded controls, reset, and isolated-copy cold-run record support reproducibility. |

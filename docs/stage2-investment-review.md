@@ -1,6 +1,6 @@
-# Stage 2 investment-judgment review — analyst-review draft pending the student's investment judgment
+# Stage 2 investment-judgment review — historical analyst-review draft; Watch / Defer subsequently approved by the student
 
-**Scope and cutoff.** This is an objective analyst-review draft, not a replacement investment decision. It uses the September 1, 2026 after-close cutoff and current Python output only. The October 14, 2026 approved SBC accounting repair changes consolidated CFO, cash, equity, and the bridge; it does not change the operating forecast, operating FCFF methodology, WACC, or recommendation.
+**Scope and cutoff.** This was an objective analyst-review draft, not a replacement investment decision. It uses the September 1, 2026 after-close cutoff and current Python output only. The student subsequently approved and retained the Watch / Defer recommendation. The October 14, 2026 approved SBC accounting repair changes consolidated CFO, cash, equity, and the bridge; it does not change the operating forecast, operating FCFF methodology, WACC, or recommendation.
 
 **Deck-export status.** `docs/Decision-Deck.html` is synchronized to the current output and contains eight main slides. PDF-export status is stated separately in the current repository validation record; the HTML is the controlling presentation artifact unless and until a matching PDF is verified.
 
@@ -75,6 +75,8 @@ Oracle and Accenture are reference anchors rather than equivalent peers or a ble
 The student has retained the Watch / Defer recommendation. At the cutoff price, the base value is $49.11/share lower and even the named high case is $7.12/share lower. A lower-WACC/higher-growth matrix can clear price, but it requires a more favorable steady-state combination than the selected base. The unresolved $4.78bn FY2026 management-style FCF gap, high terminal-value share, future-dilution limitation, and qualified WACC/bridge inputs argue for monitoring rather than initiation. Positive review evidence would be reported support for software growth, margin/SG&A conversion, management-FCF reconciliation, debt/cash conversion, a point-in-time diluted-share count, and stronger WACC/bridge evidence.
 
 ## 8. Questions requiring the student's approval
+
+The questions below are preserved as historical review questions from the former draft. They do not supersede the student's subsequent approval and retention of Watch / Defer.
 
 1. Is the remaining approximately $4.78bn difference between model-derived FY2026 company-style FCF and the July management-outlook reference acceptable as a disclosed qualification, or should the student perform a separate source-level reconciliation before retaining Watch / Defer?
 2. Does the student approve retaining Watch / Defer despite favorable values in the 6.07% WACC / 2.5%-3.0% terminal-growth matrix cells?

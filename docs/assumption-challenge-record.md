@@ -24,7 +24,7 @@ The named classroom challenger is recorded below from the student's retrospectiv
 
 | Driver | Value/path | Fact/forecast | Basis / as-of | Challenge / range | Model effect / evidence that changes it | Owner/reviewer |
 |---|---|---|---|---|---|---|
-| Segment growth | Software 6/5.5/5/4.5%; Consulting 2.5/3/3/3%; Infrastructure 2% | Forecast | H1 2026 reported growth; FY2025 H2/H1 seasonality | ±2pp software/infrastructure; ±1.5pp consulting | Revenue, EBIT, FCFF; ARR/renewals, bookings, IBM Z evidence | |
+| Segment growth | Software 6/5.5/5/4.5%; Consulting 2.5/3/3/3%; Infrastructure 2% | Forecast | H1 2026 reported growth; FY2025 H2/H1 seasonality | ±2pp software/infrastructure; ±1.5pp consulting | Revenue, EBIT, FCFF; ARR/renewals, bookings, IBM Z evidence | Mrigna Goel — student-recalled Lab 10/11 verbal challenge |
 | Gross margin / SG&A / R&D | 57.2→59%; 30.8→29%; 13.7→13.3% | Forecast | H1 base / analyst path | GM 56–60%; SG&A ±0.5pp | EBIT; disclosed costs/productivity | |
 | IP / other income | 1.0% / 0.4% revenue | Forecast | H1 income statement | variable / not independently recurring | EBIT; licensing disclosures | |
 | Normalized NOPAT tax | 16% | Forecast | Analyst normalization; distinct from provision/cash tax | 14–20% | FCFF; filed tax reconciliation | |
