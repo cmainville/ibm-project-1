@@ -108,4 +108,12 @@ This resolves the course's published Week 3 known-answer check. It does not repr
 
 ## 8. PDF status
 
-The existing Validation and AI Use PDF was not regenerated in this task because no reliable PDF exporter is available in the current environment. It therefore does not include this Week 3 reconciliation and must be replaced through a manual browser print-to-PDF export of `docs/validation-and-ai-use.html` before submission. The Markdown record provides the detailed supporting documentation.
+The final Validation and AI Use PDF was regenerated from `docs/validation-and-ai-use.html` on October 14, 2026, following visual and text-extraction validation. It includes:
+
+- The 30-test validation result, with 0 failures.
+- All 12 published Week 3 DCF reconciliations and the 10%-to-11% WACC sensitivity verification.
+- IBM's revised $182.29 per-share base valuation (with $145.13 low and $224.28 high cases).
+- The historical Locked Changed-Input Record ($181.95 to $190.31 per share).
+- AI-use disclosures and the unresolved approximately $4.78bn FY2026 management-FCF reconciliation gap, dilution, WACC, terminal-value, pension, and IBM Financing limitations.
+
+This PDF was generated from the corresponding HTML validation record. The Markdown source provides additional supporting detail.
