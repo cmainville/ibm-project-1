@@ -93,7 +93,7 @@ Edition A identified a potentially investable software-led business but could no
 | Operating enterprise value | $220.10bn |
 | Terminal value as share of operating EV | **78.06%** |
 | Reverse-DCF growth needed to match market price | **3.815%** at base WACC and 15% terminal ROIC |
-| Quality-control record | **30/30 automated tests passing**; intentional $1m failure detected; published Week 3 benchmark reconciled |
+| Quality-control record | **30/30 automated tests passing at Edition B finalization**; intentional $1m failure detected; published Week 3 benchmark reconciled. The later high-risk extension brings the current suite to 35 tests; see `docs/high-risk-validation-evidence.md`. |
 
 ## What the additional research established
 
@@ -139,7 +139,7 @@ The initial Edition A thesis and evidence were the student's baseline. The final
 | Timing and accounting repair | Full cash-flow bridge was an acknowledged unknown. | June cash/equity rolls using H2 only; post-close stub 121/184; September 10 dividend once; SBC add-back to CFO/APIC, not operating FCFF. | Mixed: independent date/source check, AI-assisted repair, student-approved SBC assumption. | Stub and dividend tests; FY2026 historical bridge; `stage2-sbc-review-approved-2026-10-14.md`. |
 | Assumptions and sensitivity | Hypotheses about recurring software, refinancing and earnings quality without quantified sensitivities. | Segment growth, 57.2%-59% gross margin path, 7.07% WACC, terminal ROIC/reinvestment and named one-at-a-time tests. | Own forecast selection + computational tests. | Driver review, bounded live workbench, +$12.20 GM / +$8.36 Software OAT values; WACC/g grid. |
 | Risk and uncertainty | Debt, cash-flow quality, organic growth and unknown market expectations. | 78.06% terminal EV; qualified beta/debt yield, pension and dilution; $4.782bn management-style FCF gap. | Additional primary-source investigation and model challenge; AI-assisted diagnostic. | Reported versus proxy FCF bridge; independent source check; reverse DCF of 3.815% terminal g at market. |
-| AI challenge and changed input | No completed model experiment or AI-based valuation to test. | Preserved pre-SBC locked software-growth +2pp experiment: $181.95 to $190.31, unchanged Watch / Defer. Later SBC repair separately approved and tested. | Student-authored prediction and evaluation; AI-assisted model/test development. | Original BEFORE/AFTER files, screenshot evidence and commit history; later 30/30 tests and `docs/week3-known-answer-reconciliation.md`. |
+| AI challenge and changed input | No completed model experiment or AI-based valuation to test. | Preserved pre-SBC locked software-growth +2pp experiment: $181.95 to $190.31, unchanged Watch / Defer. Later SBC repair separately approved and tested. | Student-authored prediction and evaluation; AI-assisted model/test development. | Original BEFORE/AFTER files, screenshot evidence and commit history; 30/30 tests at Edition B finalization, later extended to 35; `docs/week3-known-answer-reconciliation.md` and `docs/high-risk-validation-evidence.md`. |
 | Decision conditions | Conduct more diligence before returning to committee. | Defer initiation; revisit after operating evidence and stronger cash conversion, WACC, pension and dilution support. | Own investment judgment, confirmed with model outcomes. | Base and named high cases below market, reverse DCF and explicit monitoring triggers. |
 
 ## Bottom line

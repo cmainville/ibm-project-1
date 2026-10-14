@@ -38,7 +38,7 @@ The local workbench is interactive: browser controls send requests to Python, wh
 
 ### Offline, read-only review
 
-For review without starting Python, open `output/visible-base-output.html` for the static base-case output or `docs/Decision-Deck.html` for the decision deck. These are read-only HTML artifacts: unlike the interactive Python-backed workbench, they do not provide controls or recompute the financial model.
+For review without starting Python, open the [visible base output](output/visible-base-output.html) for the static base-case output or the [decision deck](docs/Decision-Deck.html). These are read-only HTML artifacts: unlike the interactive Python-backed workbench, they do not provide controls or recompute the financial model.
 
 ### Reproduce the checks
 
@@ -59,6 +59,7 @@ python3 app/server.py --write-static
 - `output/phase3-model-output.json` and `output/visible-base-output.html` - regenerated visible base outputs.
 - `docs/Decision-Deck.html` and `docs/Decision-Deck.pdf` - eight-slide submission deck and matching PDF.
 - `docs/validation-and-ai-use.*` - reproducible validation and AI-use record.
+- `project-submission-manifest.csv`, `docs/final-submission-readiness.md`, and `docs/video-evidence-index-plan.md` - pre-recording submission architecture, requirement evidence, and post-recording timestamp plan.
 - `evidence-ledger.md`, `docs/assumption-challenge-record.md`, and `docs/phase4-5-review.md` - evidence, assumptions and methodology record.
 
 ## Key conventions
