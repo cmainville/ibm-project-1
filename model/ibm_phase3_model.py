@@ -43,6 +43,11 @@ def check_bounds(inputs):
         if not b["cash_tax_floor"] <= x <= b["cash_tax_ceiling"]: raise ValueError("Normalized NOPAT tax rate outside documented bound")
     for x in d["balance_sheet_and_financing"]["minimum_operating_cash"]:
         if not b["minimum_cash_floor"] <= x <= b["minimum_cash_ceiling"]: raise ValueError("Minimum cash outside documented bound")
+    sbc=d["stock_based_compensation"]
+    schedule=sbc["forecast_expense_and_noncash_cfo_addback"]
+    low,high=sbc["h2_2026_sensitivity_range"]
+    if len(schedule)!=len(YEARS) or any(x<0 for x in schedule): raise ValueError("Invalid stock-based compensation schedule")
+    if not low<=schedule[0]<=high: raise ValueError("H2 stock-based compensation outside documented sensitivity range")
 
 def h1_2026_actual(inputs):
     src = inputs["actuals"]["h1_2026"]
@@ -56,7 +61,7 @@ def h1_2026_actual(inputs):
            "ip_income":inc["ip_income"], "other_income":inc["other_income"], "operating_ebit_ex_financing":ebit,
            "financing_pretax_contribution":rev["financing"]-financing_cost, "corporate_interest":inc["interest"],
            "pretax_income":inc["pretax"], "income_tax_provision":inc["income_tax_provision"], "net_income":inc["net_income"],
-           "depreciation":cf["depreciation"], "amortization":cf["amortization"], "capex":cf["capex"],
+           "depreciation":cf["depreciation"], "amortization":cf["amortization"], "stock_based_compensation":cf["stock_based_compensation"], "capex":cf["capex"],
            "software_investment":cf["software_investment"], "cfo_consolidated":cf["cfo"], "common_dividends":cf["dividends"]}
     if abs(sum(rev.values())-inc["revenue"])>1e-6: raise ValueError("H1 segment revenue bridge failed")
     if abs(ebit+row["financing_pretax_contribution"]-inc["interest"]-inc["pretax"])>1e-6: raise ValueError("H1 pretax bridge failed")
@@ -82,6 +87,7 @@ def period_statement(rev, previous, inputs, i, half_year=False):
             "pretax_income":pretax,"income_tax_provision":taxes,"net_income":pretax-taxes,
             "depreciation":previous["ppe"]*cap["depreciation_pct_beginning_ppe"][i],
             "amortization":previous["intangibles"]*cap["amortization_pct_beginning_intangibles"][i]*(0.5 if half_year else 1),
+            "stock_based_compensation":d["stock_based_compensation"]["forecast_expense_and_noncash_cfo_addback"][i],
             "capex":r*cap["capex_pct_operating_revenue"][i],
             "software_investment":r*cap["capitalized_software_pct_operating_revenue"][i]}
 
@@ -118,20 +124,22 @@ def period_cash_flow(inc, ending, previous, inputs, i, half_year=False):
     dfar=ending["financing_receivables"]-previous["financing_receivables"]
     dcorp=ending["corporate_debt"]-previous["corporate_debt"]
     dfdebt=ending["financing_debt"]-previous["financing_debt"]
-    cfo=inc["net_income"]+inc["depreciation"]+inc["amortization"]-da+dl+dtax-dfar
+    # SBC expense is assumed embedded in forecast operating-cost ratios. It is noncash in this period,
+    # so add it back once to CFO; credit APIC/equity separately, without modeling cash share issuance.
+    cfo=inc["net_income"]+inc["depreciation"]+inc["amortization"]+inc["stock_based_compensation"]-da+dl+dtax-dfar
     ending["cash"]=previous["cash"]+cfo-inc["capex"]-inc["software_investment"]+dcorp+dfdebt-dividends
-    equity_movements=0.0  # OCI, employee plans, treasury and NCI held flat pending H2 evidence.
+    equity_movements=inc["stock_based_compensation"]  # Noncash SBC credit to APIC; OCI, treasury and NCI held flat.
     ending["equity"]=previous["equity"]+inc["net_income"]-dividends+equity_movements
     tax_rate=inputs["draft_assumptions"]["operating_drivers"]["normalized_nopat_tax_rate"][i]
     fcff=inc["operating_ebit_ex_financing"]*(1-tax_rate)+inc["depreciation"]+inc["amortization"]-inc["capex"]-inc["software_investment"]-da+dl
     return {"delta_operating_assets":da,"delta_operating_liabilities":dl,"delta_consolidated_taxes_payable":dtax,"delta_financing_receivables":dfar,
             "delta_corporate_debt":dcorp,"delta_financing_debt":dfdebt,"cfo_consolidated":cfo,
-            "common_dividends":dividends,"other_equity_movements":equity_movements,
+            "common_dividends":dividends,"stock_based_compensation_apic":inc["stock_based_compensation"],"other_equity_movements":equity_movements,
             "cash_from_cash_flow":ending["cash"],"cash_change":ending["cash"]-previous["cash"],
             "operating_fcff_ex_financing":fcff}
 
 def fy2026_full_year(h1,h2):
-    keys=SEGMENTS+("operating_revenue","total_revenue","operating_cogs","operating_gross_profit","operating_sga","rnd","ip_income","other_income","operating_ebit_ex_financing","financing_pretax_contribution","corporate_interest","pretax_income","income_tax_provision","net_income","depreciation","amortization","capex","software_investment","cfo_consolidated","common_dividends")
+    keys=SEGMENTS+("operating_revenue","total_revenue","operating_cogs","operating_gross_profit","operating_sga","rnd","ip_income","other_income","operating_ebit_ex_financing","financing_pretax_contribution","corporate_interest","pretax_income","income_tax_provision","net_income","depreciation","amortization","stock_based_compensation","capex","software_investment","cfo_consolidated","common_dividends")
     return {k:h1[k]+h2[k] for k in keys}
 
 def assert_checks(model,inputs):

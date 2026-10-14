@@ -15,7 +15,7 @@
     "h1_2026": {
       "revenue": {"software": 14813, "consulting": 10599, "infrastructure": 7161, "financing": 406, "other": 100},
       "income_statement": {"revenue": 33079, "cost": 14222, "sga": 10071, "rnd": 4485, "ip_income": 338, "other_income": 186, "interest": 959, "pretax": 3866, "income_tax_provision": 484, "net_income": 3381},
-      "cash_flow": {"cfo": 7766, "depreciation": 1088, "amortization": 1535, "capex": 461, "software_investment": 313, "dividends": 3166}
+      "cash_flow": {"cfo": 7766, "depreciation": 1088, "amortization": 1535, "stock_based_compensation": 1004, "capex": 461, "software_investment": 313, "dividends": 3166}
     }
   },
   "opening_june_2026": {
@@ -80,6 +80,11 @@
       "capitalized_software_pct_operating_revenue": [0.010, 0.010, 0.010, 0.010, 0.010],
       "depreciation_pct_beginning_ppe": [0.190, 0.380, 0.380, 0.380, 0.380],
       "amortization_pct_beginning_intangibles": [0.210, 0.190, 0.170, 0.150, 0.130]
+    },
+    "stock_based_compensation": {
+      "forecast_expense_and_noncash_cfo_addback": [938.5, 1877.0, 1877.0, 1877.0, 1877.0],
+      "h2_2026_sensitivity_range": [873.0, 1004.0],
+      "basis": "H2 2026 provisional midpoint of H1 2026 reported $1,004m and FY2025 H2 historical $873m; FY2027-30 held at annualized H2 2026 level. SBC is assumed embedded in forecast operating-cost ratios and is added back to CFO/APIC exactly once."
     },
     "balance_sheet_and_financing": {
       "corporate_debt": [48940, 48000, 47000, 46000, 45000],

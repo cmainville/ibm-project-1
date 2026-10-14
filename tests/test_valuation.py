@@ -42,6 +42,16 @@ class ValuationTests(unittest.TestCase):
         self.assertEqual(rows[2026]["h2_2026_forecast"]["operating_fcff_ex_financing"],self.rows[2026]["h2_2026_forecast"]["operating_fcff_ex_financing"])
         self.assertNotEqual(sep1_bridge(rows,altered)["estimated_sep1_corporate_debt"],sep1_bridge(self.rows,self.inputs)["estimated_sep1_corporate_debt"])
 
+    def test_sbc_changes_cash_bridge_not_operating_ev_or_stub(self):
+        altered=deepcopy(self.inputs)
+        altered["draft_assumptions"]["stock_based_compensation"]["forecast_expense_and_noncash_cfo_addback"][0]=1004
+        rows=build_model(altered)
+        base=dcf_from_rows(self.rows,self.inputs)
+        changed=dcf_from_rows(rows,altered)
+        self.assertAlmostEqual(changed["bridge"]["operating_ev"],base["bridge"]["operating_ev"])
+        self.assertAlmostEqual(rows[2026]["residual_fcff_after_sep1_proportional"],self.rows[2026]["residual_fcff_after_sep1_proportional"])
+        self.assertGreater(sep1_bridge(rows,altered)["estimated_sep1_cash"],sep1_bridge(self.rows,self.inputs)["estimated_sep1_cash"])
+
     def test_wacc_uses_corporate_debt_and_marginal_tax(self):
         w=wacc_build(self.inputs,self.rows)
         self.assertNotEqual(w["corporate_debt"],48940+13047)

@@ -63,6 +63,32 @@ class Phase3Tests(unittest.TestCase):
         self.assertAlmostEqual(self.y26["capex"], 461 + self.h2["operating_revenue"] * .015)
         self.assertAlmostEqual(self.y26["software_investment"], 313 + self.h2["operating_revenue"] * .01)
 
+    def test_sbc_historical_anchor_and_h2_schedule(self):
+        schedule=self.inputs["draft_assumptions"]["stock_based_compensation"]
+        self.assertEqual(self.h1["stock_based_compensation"],1004)
+        self.assertAlmostEqual(self.h2["stock_based_compensation"],938.5)
+        self.assertNotEqual(self.h2["stock_based_compensation"],self.h1["stock_based_compensation"])
+        self.assertGreaterEqual(self.h2["stock_based_compensation"],schedule["h2_2026_sensitivity_range"][0])
+        self.assertLessEqual(self.h2["stock_based_compensation"],schedule["h2_2026_sensitivity_range"][1])
+
+    def test_sbc_is_noncash_cfo_addback_with_matching_apic(self):
+        expected=(self.h2["net_income"]+self.h2["depreciation"]+self.h2["amortization"]+
+                  self.h2["stock_based_compensation"]-self.h2["delta_operating_assets"]+
+                  self.h2["delta_operating_liabilities"]+self.h2["delta_consolidated_taxes_payable"]-
+                  self.h2["delta_financing_receivables"])
+        self.assertAlmostEqual(self.h2["cfo_consolidated"],expected)
+        self.assertAlmostEqual(self.h2["stock_based_compensation_apic"],self.h2["stock_based_compensation"])
+        expected_equity=(self.open["equity"]+self.h2["net_income"]-self.h2["common_dividends"]+
+                         self.h2["stock_based_compensation_apic"])
+        self.assertAlmostEqual(self.y26["equity"],expected_equity)
+
+    def test_sbc_does_not_change_operating_fcff(self):
+        altered=deepcopy(self.inputs)
+        altered["draft_assumptions"]["stock_based_compensation"]["forecast_expense_and_noncash_cfo_addback"][0]=1004
+        changed=m.build_model(altered)
+        self.assertNotEqual(changed[2026]["h2_2026_forecast"]["cfo_consolidated"],self.h2["cfo_consolidated"])
+        self.assertAlmostEqual(changed[2026]["operating_fcff_ex_financing"],self.y26["operating_fcff_ex_financing"])
+
     def test_operating_fcff_excludes_financing(self):
         for year, row in self.rows.items():
             p = self.h2 if year == 2026 else row
