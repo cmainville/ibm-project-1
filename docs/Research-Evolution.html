@@ -174,7 +174,7 @@ hr{border:none;border-top:1px solid #beced5;margin:18px 0}
 </tr>
 <tr>
   <td style="text-align:left">Quality-control record</td>
-  <td style="text-align:right"><strong>28/28 automated tests passing</strong>; intentional $1m failure detected</td>
+  <td style="text-align:right"><strong>30/30 automated tests passing</strong>; intentional $1m failure detected; published Week 3 benchmark reconciled</td>
 </tr>
 </tbody>
 </table>
@@ -193,7 +193,7 @@ hr{border:none;border-top:1px solid #beced5;margin:18px 0}
 </ol>
 <h2>What remains uncertain and what would change the decision</h2>
 <p><strong>Material, unresolved cash-conversion qualification.</strong> After the SBC correction, the model's approximately <strong>$10.918bn FY2026 company-style FCF proxy</strong> is <strong>$4.782bn lower</strong> than a roughly $15.7bn management-outlook reference available by the cutoff. Forecast cash taxes, Financing-receivable movements, H2 seasonality, and the non-identical capital-investment definition remain insufficiently reconciled. Consolidated CFO, IBM-defined FCF and unlevered operating FCFF are <strong>different measures</strong>; the model was not forced to meet guidance.</p>
-<p><strong>Valuation qualification.</strong> The 0.70 beta has an opaque third-party methodology; the 5.47% pretax debt cost is a Treasury-plus-single-A-spread proxy rather than an IBM-specific bond yield; pension and Financing values require fuller reconciliation; future SBC dilution and point-in-time diluted shares remain unresolved. With <strong>78.06%</strong> of operating EV arising from terminal value, the DCF is sensitive to steady-state assumptions. A published course training-case known-answer comparison is still blocked by missing starter/answer-key material; internal tests are not represented as that comparison.</p>
+<p><strong>Valuation qualification.</strong> The 0.70 beta has an opaque third-party methodology; the 5.47% pretax debt cost is a Treasury-plus-single-A-spread proxy rather than an IBM-specific bond yield; pension and Financing values require fuller reconciliation; future SBC dilution and point-in-time diluted shares remain unresolved. With <strong>78.06%</strong> of operating EV arising from terminal value, the DCF is sensitive to steady-state assumptions. The published Week 3 training-case reconciliation now passes all 12 published outputs within tolerance: conventional DCF value is <strong>$27.4974/share at 10% WACC</strong> and <strong>$23.4140 at 11%</strong>. It validates conventional DCF arithmetic only, not IBM-specific timing, Financing treatment, or ROIC-based terminal reinvestment; see <code>docs/week3-known-answer-reconciliation.md</code>.</p>
 <p><strong>Committee conditions.</strong> Maintain Watch / Defer until reported software demand, renewal performance, Consulting recovery and gross-margin/SG&amp;A conversion support the forecast, and cash-flow quality and equity-bridge items become independently reproducible. Revisit after two relevant reporting quarters or sooner if credible evidence materially changes value. Re-underwrite downward if growth, conversion or leverage deteriorate, or if validated pension/dilution/financing claims reduce equity value. Initiation requires a <strong>conservatively supported value above the prevailing price</strong>, not merely an optimistic sensitivity cell.</p>
 <h2>Research responsibility and audit trail</h2>
 <p>The initial Edition A thesis and evidence were the student's baseline. The final forecasting choices, Watch / Defer action and approved SBC schedule are the student's investment judgments. AI-assisted code inspection, calculation repair, testing and document preparation are disclosed; no undocumented partner criticism is attributed to a third party. Primary-date sources and detailed tests are preserved in the repository's <code>evidence-ledger.md</code>, <code>docs/validation-and-ai-use.md</code>, <code>docs/stage2-investment-review.md</code>, <code>docs/stage2-sbc-review-approved-2026-10-14.md</code>, and <code>docs/locked-changed-input-record-*.txt</code>.</p>
@@ -230,7 +230,7 @@ hr{border:none;border-top:1px solid #beced5;margin:18px 0}
   <td>Research plan for three cases, debt schedule, enterprise bridge and comps.</td>
   <td>Connected FY2026 H1 actual + H2 forecast through FY2030 statements, FCFF DCF, IBM Financing sidecar, equity bridge and separate peer anchors.</td>
   <td>Own research + AI-assisted coding and testing.</td>
-  <td><code>model/</code>, <code>output/</code>, reconciled bridge, 28 automated tests, working browser app.</td>
+  <td><code>model/</code>, <code>output/</code>, reconciled bridge, 30 automated tests, working browser app.</td>
 </tr>
 <tr>
   <td>Timing and accounting repair</td>
@@ -258,7 +258,7 @@ hr{border:none;border-top:1px solid #beced5;margin:18px 0}
   <td>No completed model experiment or AI-based valuation to test.</td>
   <td>Preserved pre-SBC locked software-growth +2pp experiment: $181.95 to $190.31, unchanged Watch / Defer. Later SBC repair separately approved and tested.</td>
   <td>Student-authored prediction and evaluation; AI-assisted model/test development.</td>
-  <td>Original BEFORE/AFTER files, screenshot evidence and commit history; later 28/28 tests.</td>
+  <td>Original BEFORE/AFTER files, screenshot evidence and commit history; later 30/30 tests and <code>docs/week3-known-answer-reconciliation.md</code>.</td>
 </tr>
 <tr>
   <td>Decision conditions</td>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>IBM Project 1 - Validation and AI-use Record</title>
-<style>@page{size:letter;margin:.6in}*{box-sizing:border-box}body{font:10pt Arial,sans-serif;color:#172a3a;line-height:1.35;max-width:8.5in;margin:0 auto;padding:.1in}h1{font-size:20pt;color:#083b5c;border-bottom:2px solid #0c8996;padding-bottom:8px;margin:0 0 8px}h2{font-size:14pt;color:#083b5c;margin:22px 0 7px}h3{font-size:11.5pt;color:#0c6170;margin:16px 0 5px}p{margin:7px 0}table{border-collapse:collapse;width:100%;margin:8px 0;font-size:8.7pt}th,td{border:1px solid #b9cbd1;padding:5px;vertical-align:top;text-align:left}th{background:#e8f2f3;color:#083b5c}td:last-child:not(:first-child){text-align:left}.num{text-align:right;white-space:nowrap}.note{background:#fff6dc;padding:10px;border-left:4px solid #d5991f}.pass{color:#146c43;font-weight:700}code{font:8.5pt ui-monospace,monospace;background:#eef4f5;padding:1px 3px;overflow-wrap:anywhere}.test-list{font-size:7.4pt;line-height:1.2}ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}tr{break-inside:avoid;page-break-inside:avoid}h2,h3{break-after:avoid;page-break-after:avoid}@media print{h2:nth-of-type(3),h2:nth-of-type(4){break-before:page}body{max-width:none;padding:0}a{color:#083b5c}}</style>
+<style>@page{size:letter;margin:.6in}*{box-sizing:border-box}body{font:10pt Arial,sans-serif;color:#172a3a;line-height:1.35;max-width:8.5in;margin:0 auto;padding:.1in}h1{font-size:20pt;color:#083b5c;border-bottom:2px solid #0c8996;padding-bottom:8px;margin:0 0 8px}h2{font-size:14pt;color:#083b5c;margin:22px 0 7px}h3{font-size:11.5pt;color:#0c6170;margin:16px 0 5px}p{margin:7px 0}table{border-collapse:collapse;width:100%;margin:8px 0;font-size:8.7pt}th,td{border:1px solid #b9cbd1;padding:5px;vertical-align:top;text-align:left}th{background:#e8f2f3;color:#083b5c}td:last-child:not(:first-child){text-align:left}.num{text-align:right;white-space:nowrap}.note{background:#fff6dc;padding:10px;border-left:4px solid #d5991f}.pass{color:#146c43;font-weight:700}code{font:8.5pt ui-monospace,monospace;background:#eef4f5;padding:1px 3px;overflow-wrap:anywhere}.test-list{font-size:7.4pt;line-height:1.2}.locked{white-space:pre-wrap;overflow-wrap:anywhere;font:7.4pt ui-monospace,monospace;line-height:1.28;background:#f4f7f7;border:1px solid #b9cbd1;padding:9px}ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}tr{break-inside:avoid;page-break-inside:avoid}h2,h3{break-after:avoid;page-break-after:avoid}@media print{h2:nth-of-type(3),h2:nth-of-type(4){break-before:page}body{max-width:none;padding:0}a{color:#083b5c}}</style>
 </head><body>
 <h1>IBM Project 1 - Validation and AI-use Record</h1>
 <p><b>Prepared:</b> October 14, 2026, America/Indiana/Indianapolis<br><b>Model repository baseline:</b> <code>0e3981bd1709ad0c35ef3eff8583c1d3afd0ca02</code><br><b>Valuation cutoff:</b> September 1, 2026, after close<br><b>Decision:</b> <b>Watch / Defer</b> IBM common stock. This is a validation record, not a replacement investment decision.</p>
@@ -48,4 +48,47 @@
 <h2>6. Known-answer status</h2>
 <p>The published FIN 43900 <a href="https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-03/lab-05-dcf-build.md">Week 3 training case and answer table</a> were located in the course repository. A standalone conventional-DCF implementation calculated all 12 outputs from published inputs; every comparison passed the documented tolerance. At 11% WACC, value was $23.4140/share, below the restored 10% baseline of $27.4974/share. See <code>docs/week3-known-answer-reconciliation.md</code> and <code>docs/known-answer-blocker.md</code> for sources, comparisons, commands, and scope.</p>
 <p>This resolves the published Week 3 known-answer check. It does not make the training case an end-to-end test of IBM-specific timing, ROIC-terminal, Financing, or forecast logic. This PDF was generated from the corresponding HTML validation record. The Markdown source provides additional supporting detail.</p>
+<h2>7. Appendix A - Complete historical Locked Changed-Input AFTER record</h2>
+<p>The following AFTER record is reproduced verbatim from <code>docs/locked-changed-input-record-after.txt</code>. The separate BEFORE snapshot contains Part A's pre-run prediction with Part B blank. This experiment preceded the later SBC accounting repair; its $181.95 baseline and $190.31 observed value are not the current $182.29 base. Reported predecessor commit <code>7359ba2</code> is not independently verified here; archived BEFORE commit <code>4591725</code> is a later preservation event, not proof of the original prediction timestamp.</p>
+<pre class="locked">FIN 43900 PROJECT 1 - LOCKED CHANGED-INPUT RECORD
+IBM Software Revenue Growth Test
+
+PART A - BEFORE RUNNING THE TEST (AI OFF)
+
+Date and time of prediction: 10/10/2026 @ 12:39pm
+Baseline model Git commit ID: f91410f
+Prediction-file Git commit ID (save after committing, before running): 4591725
+
+Input being changed: Software revenue growth shift
+Original input: 0 percentage points
+New input: +2 percentage points (for 2027-2030)
+Original IBM intrinsic value: $181.95 per share
+
+MY PREDICTION (before running the test):
+Expected effect on revenue, operating profit, and FCFF: I expect IBM's revenue, operating profit, and free cash flow to increase as stronger software growth generates additional sales and earnings over the forecast period.
+
+Expected effect on intrinsic value per share: I expect IBM's intrinsic value to increase above the baseline valuation of $181.95 per share because higher projected free cash flows should increase the present value of the business.
+
+Expected effect on my investment recommendation: I expect IBM's valuation to become more attractive, but I do not anticipate this adjustment alone will change my Watch/Defer recommendation, given the current market price of $231.40.
+
+Why I expect these changes: I believe IBM's AI and hybrid-cloud businesses could drive stronger software revenue growth than my baseline forecast assumes. Higher software demand could improve operating earnings and free cash flow, supporting a higher intrinsic valuation over time.
+
+
+PART B - AFTER RUNNING THE TEST
+
+Test date and time: 10/10/2026 @ 12:53pm
+New IBM intrinsic value per share: $190.31
+New 2030 operating profit (EBIT), $ millions: $15,279.2M
+New 2030 FCFF, $ millions: $14,152.8M
+WACC after change: 7.07%
+
+Did the results move as I predicted?: Yes, as increasing IBM's software revenue growth by 2 percentage points raised its intrinsic value from $181.95 to $190.31 per share,(+ $8.36 (4.6%)). Operating profit and free cash flow also increased, which supports my prediction that stronger software growth would improve IBM's financial performance and valuation.
+
+Did my investment recommendation change?: No. My recommendation remains Watch/Defer. Although the higher software growth assumption increased IBM's intrinsic value to $190.31, it remains below the market price of $231.40. This suggests stronger growth alone is not enough to justify initiating a position at the current valuation.
+
+If results differed from my prediction?: The results moved in the direction I expected, so there was no directional difference from my prediction. However, the valuation increase was not large enough to change my investment recommendation. This shows that even with stronger software growth, IBM's current market price remains above my model's estimated intrinsic value.
+
+Location of before/after saved results: Screenshots of the original baseline ($181.95/share) and the +2 percentage-point software growth test ($190.31/share) are saved in my project’s GitHub repository.
+Did I reset the model to its original baseline? Yes. I reset the software growth adjustment to 0 percentage points and restored the original baseline model.
+</pre>
 </body></html>

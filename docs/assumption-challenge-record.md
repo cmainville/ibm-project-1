@@ -1,6 +1,24 @@
 # Assumption-challenge record — provisional
 
-Owner/reviewer and partner challenge fields are blank: no documented partner challenge was supplied.
+Named reviewer fields remain unavailable. The historical in-class challenge documented below is a student-reported retrospective recollection, not a written partner record.
+
+## Historical In-Class Partner Challenge — AI and IBM Software Growth
+
+**Challenge:** Could AI disrupt or weaken IBM's existing software business?
+
+**Student response:** AI could also enable IBM to scale software capabilities and support additional growth.
+
+**Assumption challenged:** Long-term Software revenue growth and durability.
+
+**Economic downside:** AI-driven substitution or competition could weaken IBM demand and the growth assumptions.
+
+**Economic upside:** AI adoption could strengthen IBM software opportunities, including adoption, renewals, pricing, and cross-selling.
+
+**Subsequent analysis:** The student's historical Lab 11 work tested Software-growth changes of ±2 percentage points and considered AI downside/upside scenarios. Its earlier FCFE values ($170.00 low / $180.39 base / $191.66 high) are historical Lab 11 results, not the final Project 1 FCFF valuations.
+
+**Disposition:** Retain a conditional growth forecast, test sensitivities, and monitor Software performance.
+
+**Provenance and limitation:** This is the student's retrospective recollection of an actual verbal classroom exchange during Weeks 5–6 pro-forma work. The exact date, partner identity, and original feedback note are unavailable. The original Lab 10 document (`lab10_proforma_IBM(2).md`) and Lab 11 document (`lab11_sensitivity_IBM(1).md`) are not present in this workspace and were not independently inspected. Lab 10's two written partner questions were hypothetical and are not represented as actual partner questions. The partner did not independently run, check, or validate the model. The student was absent for Lab 12; no Lab 12 peer-review evidence exists.
 
 | Driver | Value/path | Fact/forecast | Basis / as-of | Challenge / range | Model effect / evidence that changes it | Owner/reviewer |
 |---|---|---|---|---|---|---|
@@ -20,4 +38,3 @@ Owner/reviewer and partner challenge fields are blank: no documented partner cha
 | Pension | $0 separate bridge claim | Convention | 2025 retirement note + June prepaid/liability lines | may change with funded-status/cash evidence | bridge; pension note/cash schedule | |
 | Peer policy | Oracle, Accenture only | Policy | declared before refreshed output | business-mix mismatch | method comparison; qualification failure | |
 | Dividend payable / Sep. 1 bridge | $1.69×942.134m=$1,592.2; 63/184 H2 flow | Fact/proxy | dividend #446; June share proxy | actual August count / intraquarter cash | net debt; filing/update | |
-
