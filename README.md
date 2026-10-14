@@ -2,18 +2,53 @@
 
 **Decision:** Watch / Defer IBM common stock. The September 1, 2026 after-close price was **$231.40**. The completed five-year operating DCF produces **$144.80 / $181.95 / $223.94** per diluted share in low/base/high causal cases. Base is below price and terminal value is 78.1% of operating EV. The workbench and deck therefore frame a monitoring decision, not an initiation.
 
-## Run and reproduce
+## Start the interactive workbench
 
-Requires Python 3.10+ only for the model and local application. From this directory:
+The interactive application requires **Python 3.10 or later**. It runs only on your computer and does not require packages, an account, or an internet connection after download.
+
+### Mac (easiest)
+
+In Finder, open the downloaded project folder and double-click `Launch IBM.command`. Keep the Terminal window open while using the workbench; it will open the local site and automatically chooses another port if 8765 is busy.
+
+If macOS says the launcher is not executable, open Terminal in the project folder and run:
+
+```sh
+chmod +x "Launch IBM.command"
+```
+
+Then double-click it again. This only restores the file's normal executable permission; do not bypass macOS security protections. If macOS asks for confirmation because the file was downloaded, use its normal Open/Allow flow after reviewing the repository source.
+
+### Any platform (manual fallback)
+
+Open a terminal in this project folder and run:
+
+```sh
+python3 app/server.py --port 8765
+```
+
+Then open [http://127.0.0.1:8765/](http://127.0.0.1:8765/) in a browser. On Windows, if `python3` is unavailable, use the Python launcher instead:
+
+```powershell
+py -3 app/server.py --port 8765
+```
+
+If port 8765 is already occupied, choose another unused port, for example `python3 app/server.py --port 8768`, and open the matching URL: `http://127.0.0.1:8768/`.
+
+The local workbench is interactive: browser controls send requests to Python, which calculates the statements, valuation, and checks. JavaScript only displays those results. Reset restores the documented base case. “Demonstrate failed check” mutates a temporary copy by $1m, reports the failure, and does not save a bad model.
+
+### Offline, read-only review
+
+For review without starting Python, open `output/visible-base-output.html` for the static base-case output or `docs/Decision-Deck.html` for the decision deck. These are read-only HTML artifacts: unlike the interactive Python-backed workbench, they do not provide controls or recompute the financial model.
+
+### Reproduce the checks
+
+From this directory:
 
 ```sh
 python3 -m unittest discover -s tests -v
 python3 model/ibm_phase3_model.py --write-output --demo-failure
 python3 app/server.py --write-static
-python3 app/server.py --port 8765
 ```
-
-Open `http://127.0.0.1:8765/`. The browser controls call Python; JavaScript only displays outputs. Reset restores the documented base case. “Demonstrate failed check” mutates a temporary copy by $1m, reports the failure, and does not save a bad model.
 
 ## Project map
 

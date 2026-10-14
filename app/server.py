@@ -74,7 +74,7 @@ def static_output(path):
     lines.append("</table><h2>IBM implied peer values</h2><table><tr><th>Peer</th><th>EV/EBIT value/share</th><th>P/E value/share</th></tr>")
     for p in r['peer_implied_values']: lines.append(f"<tr><td>{p['peer']}</td><td>${p['implied_value_per_share_ev_ebit']:.2f}</td><td>${p['implied_value_per_share_pe']:.2f}</td></tr>")
     lines.append("</table><p>Oracle/Accenture are reference anchors, not a mechanically averaged IBM target. IBM P/E uses FY2026E consolidated net income as a labeled common-earnings proxy, not NOPAT.</p>")
-    lines.append("<h2>Sources and limitations</h2><p><a href='../evidence-ledger.md'>Evidence ledger</a> · <a href='../docs/phase4-5-review.md'>Review note</a>. Beta 0.70 is a dated third-party indication with opaque method; 5.47% cost of debt is 10-year Treasury plus single-A corporate OAS, not an IBM bond yield. Pension/NCI bridge deductions remain pending. The $7.5bn operating cash floor is an analyst estimate. Locked Changed-Input Record has not been executed.</p></html>")
+    lines.append("<h2>Sources and limitations</h2><p><a href='../evidence-ledger.md'>Evidence ledger</a> · <a href='../docs/phase4-5-review.md'>Review note</a>. Beta 0.70 is a dated third-party indication with opaque method; 5.47% cost of debt is 10-year Treasury plus single-A corporate OAS, not an IBM bond yield. Pension/NCI bridge deductions remain pending. The $7.5bn operating cash floor is an analyst estimate. The human-only Locked Changed-Input Record experiment was completed October 10, 2026; its BEFORE/AFTER records and screenshots are stored in <code>docs/</code>.</p></html>")
     path.parent.mkdir(exist_ok=True)
     path.write_text("\n".join(lines))
 
