@@ -1,0 +1,34 @@
+SUPPLEMENTAL LOCKED CHANGED-INPUT RECORD — BEFORE
+
+Part A — Human prediction (complete before execution)
+
+Human prediction date and time: 10/14 @ 5:18pm
+
+Tested baseline Git commit: a2084eaddc466784f27a6187139615be08099d5f
+
+Prediction-file pre-run Git commit (record separately after committing):
+
+Driver name and units: Consulting revenue-growth shift, percentage points
+
+Old driver value: 0 percentage points
+
+New driver value: -1 percentage points
+
+Why the change is economically meaningful: Consulting is one of IBM's main operating segments and weaker demand could reduce projected sales and profitability.
+
+Expected revenue direction: Lower
+
+Expected operating-profit direction: Lower
+
+Expected FCFF direction: Lower
+
+Expected intrinsic-value direction: Lower
+
+Expected investment-decision effect: Watch/Defer
+
+Reason for the prediction: Lower forecast operating cash flows would generally lower discounted operating value for IBM.
+
+
+Part B — Observed results (leave blank before the committed prediction is verified)
+
+
