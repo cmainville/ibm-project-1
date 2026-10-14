@@ -71,6 +71,8 @@ Source links: [SEC filing detail](https://www.sec.gov/Archives/edgar/data/51143/
 
 ---
 
+> **Administrative note — October 14, 2026:** The student verified a 25/25 Lab 03 attempt containing the complete original Edition A, but the separate ungraded Project 1 Edition A checkpoint currently shows no submission. This does not alter Edition A or establish checkpoint compliance. Status: **PENDING INSTRUCTOR DETERMINATION**; see `docs/edition-a-checkpoint-status.md`.
+
 # Edition B — Investment decision after research and model validation
 
 **Decision user:** Fund Investment Committee  

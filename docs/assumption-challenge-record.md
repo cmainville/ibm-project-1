@@ -1,8 +1,10 @@
 # Assumption-challenge record — provisional
 
-Named reviewer fields remain unavailable. The historical in-class challenge documented below is a student-reported retrospective recollection, not a written partner record.
+The named classroom challenger is recorded below from the student's retrospective recollection; an exact date and contemporaneous feedback note remain unavailable.
 
 ## Historical In-Class Partner Challenge — AI and IBM Software Growth
+
+**Challenger and context:** Mrigna Goel, Lab 10/11 classroom partner exchange. Exact date not independently confirmed; source is retrospective student recollection.
 
 **Challenge:** Could AI disrupt or weaken IBM's existing software business?
 
@@ -10,15 +12,15 @@ Named reviewer fields remain unavailable. The historical in-class challenge docu
 
 **Assumption challenged:** Long-term Software revenue growth and durability.
 
-**Economic downside:** AI-driven substitution or competition could weaken IBM demand and the growth assumptions.
+**Economic downside:** AI-driven substitution, competition, pricing pressure, or weakening demand could weaken IBM's growth assumptions.
 
-**Economic upside:** AI adoption could strengthen IBM software opportunities, including adoption, renewals, pricing, and cross-selling.
+**Economic upside:** AI could strengthen IBM software capabilities, enterprise adoption, and incremental growth.
 
 **Subsequent analysis:** The student's historical Lab 11 work tested Software-growth changes of ±2 percentage points and considered AI downside/upside scenarios. Its earlier FCFE values ($170.00 low / $180.39 base / $191.66 high) are historical Lab 11 results, not the final Project 1 FCFF valuations.
 
 **Disposition:** Retain a conditional growth forecast, test sensitivities, and monitor Software performance.
 
-**Provenance and limitation:** This is the student's retrospective recollection of an actual verbal classroom exchange during Weeks 5–6 pro-forma work. The exact date, partner identity, and original feedback note are unavailable. The original Lab 10 document (`lab10_proforma_IBM(2).md`) and Lab 11 document (`lab11_sensitivity_IBM(1).md`) are not present in this workspace and were not independently inspected. Lab 10's two written partner questions were hypothetical and are not represented as actual partner questions. The partner did not independently run, check, or validate the model. The student was absent for Lab 12; no Lab 12 peer-review evidence exists.
+**Provenance and limitation:** This is the student's retrospective recollection of an actual verbal classroom exchange during Weeks 5–6 pro-forma work. The exact date and original feedback note are unavailable. The original Lab 10 document (`lab10_proforma_IBM(2).md`) and Lab 11 document (`lab11_sensitivity_IBM(1).md`) are not present in this workspace and were not independently inspected. Lab 10's two written partner questions were hypothetical and are not represented as actual partner questions. Mrigna did not independently run, check, or validate the model. The student was absent for Lab 12; no Lab 12 peer-review evidence exists.
 
 | Driver | Value/path | Fact/forecast | Basis / as-of | Challenge / range | Model effect / evidence that changes it | Owner/reviewer |
 |---|---|---|---|---|---|---|

@@ -28,6 +28,7 @@ The final connected model uses USD millions except per-share data. The valuation
 | H1 2026 history and SBC | [IBM Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/51143/000005114326000078/ibm-20260630.htm), filed July 23, 2026. It anchors the June 30 balance sheet, H1 results, $7,766m consolidated CFO, and $1,004m H1 SBC noncash adjustment. |
 | FY2025 history | [IBM FY2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231_d2.htm), filed February 24, 2026. It provides FY2025 history and $1,715m SBC; $842m H1 SBC implies $873m H2 2025 SBC. |
 | H1 management-defined FCF | $7,766m GAAP CFO - $2,264m Financing-receivable adjustment - $743m net capital investment = $4,759m, rounding to the reported $4.760bn. Consolidated CFO, IBM company-defined FCF, and operating FCFF are distinct measures. |
+| Independent historical-anchor check | IBM's Q2 2026 Form 10-Q, filed July 23, 2026: reported H1 segment revenue reconstructs to Software $14,813m + Consulting $10,599m + Infrastructure $7,161m + Financing $406m + Other $100m = $33,079m. This equals the model's H1 consolidated revenue anchor; difference $0m. See `docs/independent-source-check.md`. |
 | SBC schedule | H2 2026: $938.5m, the midpoint of reported H1 2026 $1,004m and historical H2 2025 $873m. FY2027-30: $1,877m annually, provisional and held flat. |
 | September 1 price, dividend, WACC, peers | Cutoff-dated records and source URLs are retained in `evidence-ledger.md`; calculation definitions are in `model/valuation.py`. |
 
@@ -84,13 +85,18 @@ The original locked files and screenshots are preserved unchanged at `docs/locke
 
 ## 5. AI-use record and independently checked corrections
 
-| AI-assisted output or use | Disposition and independent check |
-|---|---|
-| Code inspection, test execution, documentation, and HTML formatting | OpenAI Codex assisted under student direction. The student remains responsible for sources, assumptions, judgment, and submission. No proprietary terminal, course answers, trade, or submission action was used. Exact model/version metadata beyond the product identity was not provided and is not claimed. |
-| September 1 valuation timing / FCFF stub | Material correction. The prior 122/184 convention was independently checked against the September 1 after-close boundary and corrected to 121/184 of H2 FCFF. Automated date/stub tests now enforce it. |
-| P/E definition and peer presentation | AI-assisted review identified the need to label FY2026E consolidated net income as a common-earnings proxy rather than NOPAT. Peer arithmetic is now tested. |
-| SBC accounting review | The student approved the October 14 repair after review. The $1,004m H1 source, one-time CFO add-back, APIC treatment, no-FCFF add-back, and bridge-only valuation effect are covered by four dedicated tests and `docs/stage2-sbc-review-approved-2026-10-14.md`. |
-| Historical experiment | AI did not alter the locked prediction, outcome, screenshots, or timestamps. This document reports them as historical pre-SBC evidence only. |
+Exact model/version identifiers and individual interaction timestamps were not retained and are not claimed. Dates below are documented work dates or defensible October 2026 ranges. AI assistance is not itself independent evidence; the student owns the investment decision, approved assumptions, and all final claims.
+
+| Tool | Date/range | Material assistance/output | Disposition, independent check, and impact |
+|---|---|---|---|
+| ChatGPT — OpenAI | October 2026 project work; exact sessions unavailable | Project planning, course-requirement interpretation, financial-model methodology/accounting discussion, research/source-location assistance, model-limitation review, independent-check planning, Codex implementation instructions, Research Evolution/written-deliverable preparation, Week 3 benchmark discovery, and rubric/compliance review. | Used as planning and drafting support. Material financial claims were checked against filings, model output, tests, and the stated course source; it did not determine the student's Watch / Defer judgment. |
+| Codex — OpenAI | October 2026 implementation/validation work; exact sessions unavailable | Python implementation/debugging, interactive workbench, automated tests, student-reviewed valuation/accounting corrections, documentation, HTML/PDF export, and Git operations under student direction. | Changes were reviewed through model output, 30 automated tests, PDF inspection, and student approval where required. No exact model/version is claimed. |
+| September 1 timing / FCFF stub | October 2026 | AI-assisted inspection identified an incorrect 122/184 stub convention. | Independently checked against the after-close September 1 boundary; corrected to 121/184 and enforced by automated tests. |
+| SBC accounting review | October 14, 2026 | AI-assisted implementation of a forecast SBC noncash CFO add-back/APIC treatment. | Student approved the $938.5m H2 2026 and $1.877bn FY2027-30 provisional schedule. Four dedicated tests verify one add-back/APIC credit, no H1/H2 double count, no operating-FCFF add-back, and bridge-only movement. |
+| Published Week 3 benchmark | October 2026 | AI assistance located, interpreted, and implemented the public Lab 05 benchmark. | The publicly available Week 3 Lab 05 training-case inputs and published expected outputs were consulted to complete the Project 1 known-answer reconciliation required by the course. AI assistance helped locate, interpret, and implement the benchmark. The calculated results were generated from the published inputs and compared against the official reference outputs. This was a disclosed validation exercise, not the use of private or unreleased grading answers. All 12 comparisons and the 10%-to-11% WACC direction check passed. |
+| Historical experiment | October 10, 2026 historical evidence | The locked prediction, outcome, screenshots, and timestamps were not altered by AI. | The record remains historical pre-SBC evidence only; reported times are distinguished from later Git preservation events. |
+
+The published answers are a required reference for the known-answer validation, not hardcoded calculation inputs. The standalone conventional DCF benchmark does not independently prove every IBM-specific timing, Financing, or ROIC-based terminal-reinvestment convention. No private or unreleased course solution is claimed.
 
 ## 6. Remaining limitations, monitoring conditions, and escalation
 
