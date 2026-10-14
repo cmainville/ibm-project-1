@@ -37,7 +37,8 @@ Forecast SBC is assumed embedded in the forecast operating-cost ratios that dete
 
 | Check | Expected result | Actual result | Evidence |
 |---|---|---|---|
-| Full automated suite | 28 passing tests | **28 passed, 0 failed** | Command below; `tests/` |
+| Full automated suite | 30 passing tests | **30 passed, 0 failed** | Command below; `tests/` |
+| Published Week 3 known-answer case | All 12 published outputs reconcile; 11% WACC decreases value and 10% restores baseline | **PASS:** all 12 within tolerance; $23.4140/share at 11%; $27.4974/share restored at 10% | `test_week3_dcf_benchmark.py`; `docs/week3-known-answer-reconciliation.md` |
 | Three-statement articulation | All balance-sheet and cash-flow gaps equal zero | PASS; FY2026-30 balance-sheet gaps were 0.0 within floating-point rounding | `test_all_years_articulate`; model run |
 | Historical-source reconciliation | Opening balance, segment revenue, and pretax bridges reconcile; H1 FCF rounds to $4,760m | PASS: 0 / 0 / 0.0 gaps; $4,759m calculated, $(1)m rounding difference | `test_historical_base`; model output |
 | Enterprise-to-equity bridge | Base bridge produces $182.2876 per share | PASS: $220,096.1m EV, $2,740.5m excess cash/securities, $173,665.4m common equity, 952.7m shares | `test_sep1_bridge_rollforward_and_dividend_once` |
@@ -60,9 +61,9 @@ curl -sS http://127.0.0.1:8770/api/analysis
 
 The localhost API returned `statement_articulation: PASS` and `$182.287630` base value. This task did not repeat a fresh GitHub download. The October 14 fresh-download and launcher evidence is historical student-observed evidence in `docs/cold-run-log.md`: the launcher used port 8768 when 8765 was occupied; the then-pre-SBC base was $181.95; and the recorded API/run evidence used 24 tests. It must not be represented as a task-run result for the final SBC model.
 
-### Complete 28-test result list
+### Complete 30-test result list
 
-All returned `ok`: `test_all_years_articulate`, `test_annual_depreciation_after_2026`, `test_bounds_fail`, `test_december_cash_uses_h2_only`, `test_december_equity_uses_h2_only`, `test_fy26_investment_h1_plus_h2`, `test_fy26_net_income_h1_plus_h2`, `test_fy26_revenue_h1_plus_h2`, `test_historical_base`, `test_no_unallocated_corporate_deduction`, `test_one_million_cash_break_fails`, `test_operating_fcff_excludes_financing`, `test_reported_financing_equity`, `test_residual_fcff_not_full_year_prorated`, `test_residual_fcff_uses_h2`, `test_sbc_does_not_change_operating_fcff`, `test_sbc_historical_anchor_and_h2_schedule`, `test_sbc_is_noncash_cfo_addback_with_matching_apic`, `test_cases_reverse_dcf_and_named_scenario_order`, `test_dates_and_correct_stub_convention`, `test_peer_and_implied_value_reconciliations`, `test_prevaluation_rollforward_changes_bridge_not_operating_fcff`, `test_sbc_changes_cash_bridge_not_operating_ev_or_stub`, `test_sep1_bridge_rollforward_and_dividend_once`, `test_terminal_monotonicities`, `test_terminal_reinvestment_and_boundaries`, `test_wacc_and_growth_value_monotonicity`, and `test_wacc_uses_corporate_debt_and_marginal_tax`.
+All returned `ok`: the 28 IBM tests listed in the prior record, plus `test_published_twelve_outputs` and `test_wacc_sensitivity_decreases_value_and_baseline_restores` in `test_week3_dcf_benchmark.py`.
 
 ## 4. Historical Locked Changed-Input Record: preserve, do not restate as current
 
@@ -101,8 +102,10 @@ The original locked files and screenshots are preserved unchanged at `docs/locke
 
 ## 7. Known-answer training-case status
 
-No IBM course training-case starter file or published answer key is present in the repository. `docs/known-answer-blocker.md` identifies the needed materials. No synthetic substitute was created, and no published known-answer test is claimed as passed.
+The published Week 3 training case and official answer table were located in the FIN 43900 course repository. A standalone conventional-DCF implementation calculates all 12 outputs from the published inputs; every comparison passed the documented tolerance. At 11% WACC it calculates $23.4140/share, below the restored 10% baseline of $27.4974/share. See `docs/week3-known-answer-reconciliation.md` and `docs/known-answer-blocker.md` for source links, complete comparisons, commands, and scope.
+
+This resolves the course's published Week 3 known-answer check. It does not represent the training case as an end-to-end test of IBM-specific timing, ROIC-terminal, Financing, or forecast logic.
 
 ## 8. PDF status
 
-The final Validation and AI Use PDF was generated from the updated HTML on October 14, 2026, and visually reviewed for readability, table formatting, and content consistency. The PDF contains the approved $182.29 base valuation, 28-test validation record, historical locked experiment, AI-use disclosures, and unresolved financial limitations. The Markdown record provides the more detailed supporting documentation.
+The existing Validation and AI Use PDF was not regenerated in this task because no reliable PDF exporter is available in the current environment. It therefore does not include this Week 3 reconciliation and must be replaced through a manual browser print-to-PDF export of `docs/validation-and-ai-use.html` before submission. The Markdown record provides the detailed supporting documentation.

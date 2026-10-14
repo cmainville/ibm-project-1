@@ -1,14 +1,14 @@
-# Known-answer blocker
+# Published Week 3 known-answer status
 
-**Status: blocked by missing course materials; no known-answer test is claimed as passed.**
+**Status: completed October 14, 2026.**
 
-On October 14, 2026, the current repository was searched for `known-answer`, `training case`, `starter`, `answer key`, `DCF answer`, `Week 3`, and `reconciliation`. No IBM course training-case starter file or published answer key was found. `inventory.md` identifies an unrelated ABG training-case reference; it must not be used as an IBM substitute.
+The published FIN 43900 Week 3 DCF training case and its official answer table were located in the course repository:
 
-To complete this validation, the student must obtain from the course materials or instructor:
+- [Lab 05: DCF Build](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-03/lab-05-dcf-build.md)
+- [Worked DCF example](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-03/teach-dcf-worked-example.md)
 
-1. The exact FIN 43900 IBM training-case starter file, including its version/date.
-2. The corresponding published answer key or instructor-approved expected-output table.
-3. The required input period, units, definitions, and rounding tolerance.
-4. Written confirmation of which outputs must tie, such as revenue, EBIT, FCFF, enterprise value, equity value, and per-share value.
+`model/week3_dcf_benchmark.py` implements the published inputs and conventional annual DCF conventions from calculation inputs, rather than copying the answer values. Its two tests passed along with the IBM suite: **30 passed, 0 failed**. All 12 published outputs reconciled within the documented tolerances, and the required 10%-to-11% WACC check decreased value to $23.4140/share before the 10% baseline was restored.
 
-Until those materials are supplied, the repository can only claim its internal articulation, source, sensitivity, and deliberate-failure checks. It cannot claim a course known-answer reconciliation.
+The detailed comparison, commands, tolerances, scope, and limitations are in `docs/week3-known-answer-reconciliation.md`.
+
+This resolves the published Week 3 known-answer requirement. It is a standalone conventional-DCF benchmark, not an assertion that the IBM production model has the same timing or terminal conventions. The IBM-specific validation remains separately documented in `docs/validation-and-ai-use.md`.

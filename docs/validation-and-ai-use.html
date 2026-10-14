@@ -21,7 +21,8 @@
 
 <h2>3. Validation register: independently executed October 14, 2026</h2>
 <table><tr><th>Check</th><th>Expected result</th><th>Actual result and evidence</th></tr>
-<tr><td>Automated suite</td><td>28 passing tests</td><td><span class="pass">PASS</span> - 28 passed, 0 failed; <code>python3 -m unittest discover -s tests -v</code></td></tr>
+<tr><td>Automated suite</td><td>30 passing tests</td><td><span class="pass">PASS</span> - 30 passed, 0 failed; <code>python3 -m unittest discover -s tests -v</code></td></tr>
+<tr><td>Published Week 3 known-answer case</td><td>All 12 outputs reconcile; 11% WACC decreases value and 10% restores baseline</td><td><span class="pass">PASS</span> - all 12 within tolerance; $23.4140/share at 11%; $27.4974/share restored at 10%. See <code>docs/week3-known-answer-reconciliation.md</code>.</td></tr>
 <tr><td>Three-statement articulation</td><td>Balance-sheet and cash-flow gaps equal zero</td><td><span class="pass">PASS</span> - FY2026-30 articulate within floating-point rounding.</td></tr>
 <tr><td>Historical reconciliation</td><td>Opening, revenue, pretax, and H1 FCF reconcile</td><td><span class="pass">PASS</span> - 0 / 0 / 0.0 bridge gaps; $4,759m H1 FCF rounds to $4,760m.</td></tr>
 <tr><td>Enterprise-to-equity bridge</td><td>$182.2876 base value</td><td><span class="pass">PASS</span> - $220,096.1m EV, $2,740.5m excess cash/securities, $173,665.4m common equity, 952.7m shares.</td></tr>
@@ -45,6 +46,6 @@
 <ul><li>The September 1 timing correction from a 122/184 to a 121/184 FCFF stub was AI-assisted, independently checked, and enforced by tests.</li><li>The student approved the October 14 SBC review. Dedicated tests verify the one-time CFO/APIC treatment and no operating-FCFF double count.</li><li>Limitations remain: $4.782bn management-FCF gap, future dilution/share-count uncertainty, qualified beta and issuer-specific borrowing-cost evidence, 78.06% terminal-value dependence, pension convention, and IBM Financing book-equity sidecar.</li><li>Escalate or re-underwrite if reported growth, margins, cash conversion, debt, dilution, or WACC evidence materially contradicts the model. The current action remains Watch / Defer.</li></ul>
 
 <h2>6. Known-answer status</h2>
-<p>No IBM course training-case starter or published answer key is present. The separate blocker identifies the exact materials the student must obtain; no known-answer test is claimed as passed.</p>
-<p>This PDF was generated from the corresponding HTML validation record. The repository Markdown, HTML and PDF must remain consistent at submission.</p>
+<p>The published FIN 43900 <a href="https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-03/lab-05-dcf-build.md">Week 3 training case and answer table</a> were located in the course repository. A standalone conventional-DCF implementation calculated all 12 outputs from published inputs; every comparison passed the documented tolerance. At 11% WACC, value was $23.4140/share, below the restored 10% baseline of $27.4974/share. See <code>docs/week3-known-answer-reconciliation.md</code> and <code>docs/known-answer-blocker.md</code> for sources, comparisons, commands, and scope.</p>
+<p>This resolves the published Week 3 known-answer check. It does not make the training case an end-to-end test of IBM-specific timing, ROIC-terminal, Financing, or forecast logic. The existing PDF was not regenerated in this task because no reliable PDF exporter is available; manually print this updated HTML to PDF before submission so the three records agree.</p>
 </body></html>
