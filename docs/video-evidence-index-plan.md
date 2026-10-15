@@ -41,7 +41,7 @@ submission.
 
 Before final submission: verify playback logged out, correct/confirm captions,
 confirm the visual evidence moments against the recordings, attach the PDFs and
-transcripts in Brightspace, save the submission receipt, and complete the final
-rubric audit. The Edition A issue remains disclosed: Professor Zhang
+transcripts in Brightspace, and save the submission receipt. The final rubric
+audit is complete. The Edition A issue remains disclosed: Professor Zhang
 acknowledged preservation of the original work but did not explicitly grant
 checkpoint equivalence.

@@ -1,6 +1,6 @@
 [0:00] So my recommendation to the investment committee is Watch / Defer for IBM common stock at its September 1, 2026 closing price of $231.40. I don't believe the stock provides an attractive entry point at this time. As we can see, my base DCF values IBM at $182.29 per share, approximately 21% below the market price, using a 7.07% WACC. Terminal value represents roughly 78% of the operating enterprise value. So long-term assumptions are particularly important in this case.
 
-[0:37] So to demonstrate the model, I'll go ahead and drop the consulting growth by one percentage point. The model recalculates the statements and the valuations, and the intrinsic value falls to approximately $178.79, reflecting the weaker future operating cash flows in this case.
+[0:37] So to demonstrate the model, I'll go ahead and drop the consulting growth by one percentage point. The model recalculates the statements and the valuations, and the intrinsic value falls to approximately $179.79, reflecting the weaker future operating cash flows in this case.
 
 [0:54] So then we can go ahead and restore the base scenario. And even if we were to go to a high-base scenario, we'd see that the price comes out to $224.28, which would still be below the market price. Another feature of this would be if we reset back to the base, we can demonstrate a failed check. And if we scroll down here, it would go ahead and show that we are about a million dollars off. This was on purpose, but just to kind of show that the model is accurate.
 

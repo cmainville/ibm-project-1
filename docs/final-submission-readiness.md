@@ -2,7 +2,7 @@
 
 **Audit date:** October 14, 2026
 
-**Current review commit:** `38c2f9fef188b0b5d36aac6b2d14d8902e47531a` (not a final frozen-submission commit)
+**Submission snapshot identifier:** `project1-submission-v1` (annotated tag to be created at the verified closeout commit; no commit SHA is embedded in this file).
 **Decision:** Watch / Defer IBM common stock; September 1, 2026 after-close
 valuation date; $145.13 / $182.29 / $224.28 low/base/high; $231.40 reference
 price.
@@ -89,10 +89,10 @@ and transcribed from the supplied nine-page transcript PDF. The seven parts and
 | Repository visibility and instructional-team access | **PENDING_STUDENT_ACTION** | Open each manifest GitHub URL while logged out or with a permitted grader account. |
 | Stable video URLs and Unlisted/Public status | **PENDING_STUDENT_ACTION** | YouTube watch URLs are in the manifest; never set videos Private and verify each link logged out. |
 | Duration, webcam, audio and screen readability | **RECORDED_WITHIN_LIMITS** | V1 2:58.91 (≤3:00); V2 approximately 4:32 (≤5:00); V3 approximately 4:58.8 (≤5:00). Confirm audio/screen readability personally. |
-| Captions and transcript correction | **TRANSCRIPTS_PREPARED** | Corrected transcripts are in the repo; student must confirm YouTube caption correction, including the Video 3 0:45 spoken-number ambiguity. |
+| Captions and transcript correction | **TRANSCRIPTS_PREPARED** | Corrected transcripts are in the repo; the Video 3 0:45 spoken value is student-confirmed as $179.79. Student must still confirm/correct YouTube captions. |
 | Manifest timestamp indexes | **PREPARED_FROM_SOURCE_TRANSCRIPT** | Source-supported timestamps are now in the manifest; visual moments still need student confirmation against the uploaded videos. |
 | PDFs attached and equivalent to repository | **PENDING_STUDENT_ACTION** | Attach Research-Evolution.pdf, Decision-Deck.pdf and Validation-and-AI-Use.pdf; compare against repo. |
-| Final freeze / no private data / no contradictions | **PENDING_STUDENT_ACTION** | Run `python3 tests/audit_submission_package.py --final`, inspect `git status`, and make final commit. |
+| Final freeze / no private data / no contradictions | **CLOSEOUT_FREEZE_PREPARED** | Run `python3 tests/audit_submission_package.py --pre-submit`; it must continue to block on any undocumented manual confirmation. |
 | Brightspace submission receipt | **PENDING_STUDENT_ACTION** | Save receipt after manual submission; do not submit automatically. |
 
 ## Naming and consistency decisions
@@ -117,8 +117,8 @@ The supplied transcript PDF was split into three corrected text files; the
 source-supported timestamps are recorded in the manifest.
 
 **Ready to submit: NO.** Logged-out repository/video access checks, YouTube
-caption confirmation, final frozen commit, Brightspace attachments/receipt,
-the final rubric audit, and the instructor’s Edition A determination remain.
+caption confirmation, Brightspace attachments/receipt, and the instructor’s
+Edition A determination remain. The internal final rubric audit is complete.
 Professor Zhang acknowledged preservation of the original work but did not
 explicitly grant checkpoint equivalence; that issue remains disclosed.
 
