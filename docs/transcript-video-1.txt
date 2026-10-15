@@ -1,0 +1,13 @@
+[0:00] Hello, my name is Caden Mainville, and for Project 1, I evaluated IBM for a fund investment committee with no current position, using September 1, 2026, as my valuation date.
+
+[0:15] So, my Edition A originally recommended a Watch / Defer. IBM software revenue growth and recurring revenue base suggested that it was an attractive business model, but I had not established whether those improvements were accurately reflected in the stock price. So I needed to investigate the company's cash flow, debt, and valuation before recommending an investment. So after conducting further research, I built and connected a financial model through 2030, including a DCF model, comparable companies, and a sensitivity analysis.
+
+[0:46] My conclusion remained Watch / Defer, and my final valuation range was between $145.13 and $224.28 per share, with a base value of $182.29. All three cases fell below IBM's September 1 closing price of $231.40.
+
+[1:10] A lot of the major changes came from my own research, financial analysis, and AI-assisted model development. I also identified a few accounting and timing issues that needed some verification. One example would be that an earlier AI-produced valuation used an incorrect timing convention.
+
+[1:26] Originally, it discounted 122 days out of the 184 days of the second-half free cash flow, which overstated the remaining period after the valuation date. So I went ahead and independently checked the calendar dates, and since the valuation occurred after September 1's close, the remaining cash flows begin September 2. So the correction was only one day off, resulting in a pretty big change, though. It was around $4.79 billion in 2026 operating free cash flow.
+
+[1:58] So, since I used a kind of weird cutoff date, there were some corrections that I had to use, as I just explained. So correcting some previous AI-generated results really helped me prevent similar errors from occurring. Here's the AI-produced valuation error that I corrected. It originally used 122 days out of the 184 days of the second-half cash flow.
+
+[2:23] And then I independently checked the September 1 after-close valuation date. Cash flows begin September 2, leaving 121 days, or approximately $4.79 billion. So I corrected the model and then added tests to prevent these errors from reoccurring. But ultimately, my position stayed at Watch / Defer because I lacked a completed valuation. So in my Edition B, I had a model-supported reason to defer. IBM's growth potential remains attractive, but the valuation discount, terminal value dependence, and unresolved cash-convention questions don't justify initiating the position at this moment.

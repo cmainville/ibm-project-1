@@ -8,8 +8,10 @@ valuation date; $145.13 / $182.29 / $224.28 low/base/high; $231.40 reference
 price.
 
 This is an evidence-location and submission-readiness audit, not a claim that
-recordings, Brightspace delivery, or the Edition A checkpoint have been
-completed. The seven parts and 12-row manifest are distinct requirements.
+Brightspace delivery or the Edition A checkpoint has been completed. All three
+recordings have been made within their duration limits, uploaded to YouTube,
+and transcribed from the supplied nine-page transcript PDF. The seven parts and
+12-row manifest are distinct requirements.
 
 ## Seven-part architecture
 
@@ -18,10 +20,10 @@ completed. The seven parts and 12-row manifest are distinct requirements.
 | 1. Edition A | **PENDING_INSTRUCTOR_DETERMINATION** | `docs/Research-Evolution.*`; `docs/edition-a-checkpoint-status.md` | Lab 03 attempt contains Edition A, but the separate checkpoint has no recorded receipt. Await Professor Zhang’s ruling. |
 | 2. Research Evolution / Edition B | **QUALIFIED** | `docs/Research-Evolution.md`, `.html`, `.pdf` | Preserve unchanged Edition A; final PDF/source consistency is checked below. |
 | 3. Repository and executed output | **VERIFIED** locally | `README.md`, `ENVIRONMENT.md`, `model/`, `app/`, `output/visible-base-output.html`, `docs/cold-run-log.md` | Student must verify instructional-team GitHub access while logged out before submission. |
-| 4. Video 1 | **PENDING_RECORDING** | `docs/video-evidence-index-plan.md` | Record ≤3:00, correct captions, upload/link, transcript, timestamp index, logged-out access check. |
-| 5. Video 2 | **PENDING_RECORDING** | `docs/video-evidence-index-plan.md` | Record ≤5:00 with actual repository and high-risk validation/failure evidence. |
+| 4. Video 1 | **RECORDED; URL PROVIDED** | `docs/transcript-video-1.txt`; `docs/video-evidence-index-plan.md` | Duration 2:58.91 (within 3:00). Logged-out playback and corrected-caption checks remain student verification. |
+| 5. Video 2 | **RECORDED; URL PROVIDED** | `docs/transcript-video-2.txt`; `docs/video-evidence-index-plan.md` | Duration approximately 4:32 (within 5:00). Logged-out playback and corrected-caption checks remain student verification. |
 | 6. Decision Deck | **VERIFIED** locally | `docs/Decision-Deck.html`, `docs/Decision-Deck.pdf` (8 pages) | Attach `Decision-Deck.pdf`; final artifact/access check still required. |
-| 7. Video 3 | **PENDING_RECORDING** | `docs/video-evidence-index-plan.md` | Record ≤5:00; open with live product demonstration, not an API-only demonstration. |
+| 7. Video 3 | **RECORDED; URL PROVIDED** | `docs/transcript-video-3.txt`; `docs/video-evidence-index-plan.md` | Duration approximately 4:58.8 (within 5:00). Logged-out playback and corrected-caption checks remain student verification. |
 
 ## Requirements-to-evidence matrix
 
@@ -64,8 +66,8 @@ completed. The seven parts and 12-row manifest are distinct requirements.
 | Research Evolution PDF attachment | `docs/Research-Evolution.pdf`; manifest row 1 | **PENDING_STUDENT_ACTION** | Attach exact content-equivalent file at final submission. |
 | Decision deck ≤8 slides | `docs/Decision-Deck.pdf` (8 pages); manifest row 4 | **PENDING_STUDENT_ACTION** | Attach final PDF. |
 | Validation PDF includes sources, tests, limits, named AI uses and complete locked record | `docs/validation-and-ai-use.pdf`; manifest row 5 | **PENDING_STUDENT_ACTION** | Upload as `Validation-and-AI-Use.pdf` while retaining lower-case repository source. |
-| Stable video URLs, titles, actual durations, timestamp indexes, access confirmation | manifest rows 6–11; `docs/video-evidence-index-plan.md` | **PENDING_RECORDING** | Record, upload Unlisted/Public, correct captions, fill actual fields and test logged out. |
-| Corrected transcript text files in repo and Brightspace | planned paths in video plan; manifest rows 7/9/11 | **PENDING_RECORDING** | Do not create before recordings; correct and attach after recording. |
+| Stable video URLs, titles, actual durations, timestamp indexes, access confirmation | manifest rows 6–11; `docs/video-evidence-index-plan.md` | **QUALIFIED** | URLs, titles, durations, and source-supported timestamp indexes are recorded. Student must test each link while logged out and confirm corrected captions. |
+| Corrected transcript text files in repo and Brightspace | `docs/transcript-video-1.txt`, `docs/transcript-video-2.txt`, `docs/transcript-video-3.txt`; manifest rows 7/9/11 | **PREPARED** | Text files were prepared from supplied `transcript-source.pdf`; attach them in Brightspace at final submission. |
 | Final manifest and Brightspace receipt | `project-submission-manifest.csv`; validator | **PENDING_STUDENT_ACTION** | Complete final-mode fields and save submission receipt. |
 | No credentials/private personal data | `.gitignore`, repository scan, no `.env` dependency | **QUALIFIED** | Run a final manual GitHub scan immediately before submission. |
 
@@ -78,17 +80,17 @@ completed. The seven parts and 12-row manifest are distinct requirements.
 | Financial Soundness and Judgment — 60 | Linked model, independent DCF bridge, scenarios, reverse DCF, triggers | **QUALIFIED** | $4.782bn management-FCF gap weakens confidence but supports Watch / Defer. |
 | Technical Execution and Usability — 45 | Local workbench, reset/bounds/failure, README, output, cold-run evidence | **VERIFIED** | Video 2/3 must show this evidence. |
 | Validation, Sensitivity and Reproducibility — 75 | 35 tests, known answer, locked prospective test, failure injections, cold run, AI checks | **VERIFIED** | Final recordings/transcripts/timestamp indexes remain required submission evidence. |
-| Professional Communication — 30 | Eight-slide deck, research evolution, validation record, manifest plan | **PENDING_RECORDING** | Record clear, bounded videos; correct captions and transcripts. |
+| Professional Communication — 30 | Eight-slide deck, research evolution, validation record, recorded videos, transcripts, and manifest | **QUALIFIED** | Confirm captions, logged-out playback, and final Brightspace attachments. |
 
 ## Final pre-submission access and integrity checklist
 
 | Check | Status now | Required personal verification |
 |---|---|---|
 | Repository visibility and instructional-team access | **PENDING_STUDENT_ACTION** | Open each manifest GitHub URL while logged out or with a permitted grader account. |
-| Stable video URLs and Unlisted/Public status | **PENDING_RECORDING** | Never set videos Private; verify each link logged out. |
-| Duration, webcam, audio and screen readability | **PENDING_RECORDING** | Confirm actual duration: V1 ≤3:00, V2/V3 ≤5:00; webcam unless accommodation. |
-| Captions and transcript correction | **PENDING_RECORDING** | Correct IBM, FCFF, WACC, values, names, and speaker attribution; add repo/Brightspace text files. |
-| Manifest timestamp indexes | **PENDING_RECORDING** | Replace planned segments with actual timestamps after uploads. |
+| Stable video URLs and Unlisted/Public status | **PENDING_STUDENT_ACTION** | YouTube watch URLs are in the manifest; never set videos Private and verify each link logged out. |
+| Duration, webcam, audio and screen readability | **RECORDED_WITHIN_LIMITS** | V1 2:58.91 (≤3:00); V2 approximately 4:32 (≤5:00); V3 approximately 4:58.8 (≤5:00). Confirm audio/screen readability personally. |
+| Captions and transcript correction | **TRANSCRIPTS_PREPARED** | Corrected transcripts are in the repo; student must confirm YouTube caption correction, including the Video 3 0:45 spoken-number ambiguity. |
+| Manifest timestamp indexes | **PREPARED_FROM_SOURCE_TRANSCRIPT** | Source-supported timestamps are now in the manifest; visual moments still need student confirmation against the uploaded videos. |
 | PDFs attached and equivalent to repository | **PENDING_STUDENT_ACTION** | Attach Research-Evolution.pdf, Decision-Deck.pdf and Validation-and-AI-Use.pdf; compare against repo. |
 | Final freeze / no private data / no contradictions | **PENDING_STUDENT_ACTION** | Run `python3 tests/audit_submission_package.py --final`, inspect `git status`, and make final commit. |
 | Brightspace submission receipt | **PENDING_STUDENT_ACTION** | Save receipt after manual submission; do not submit automatically. |
@@ -109,12 +111,17 @@ completed. The seven parts and 12-row manifest are distinct requirements.
 
 ## Readiness decisions
 
-**Ready to record: YES, with a recording plan.** The finance system, evidence,
-deck, current validation record and planned timestamps are available. The
-student must use the planned evidence moments and preserve the live-product
-opening for Video 3.
+**Ready to record: COMPLETED.** The finance system, evidence, deck, and current
+validation record were used for three recordings within their duration limits.
+The supplied transcript PDF was split into three corrected text files; the
+source-supported timestamps are recorded in the manifest.
 
-**Ready to submit: NO.** Required videos, corrected transcripts, stable URLs,
-actual durations/timestamps, logged-out access checks, final frozen commit,
-Brightspace attachments/receipt, and the instructor’s Edition A determination
-are not yet complete.
+**Ready to submit: NO.** Logged-out repository/video access checks, YouTube
+caption confirmation, final frozen commit, Brightspace attachments/receipt,
+the final rubric audit, and the instructor’s Edition A determination remain.
+Professor Zhang acknowledged preservation of the original work but did not
+explicitly grant checkpoint equivalence; that issue remains disclosed.
+
+**Historical validator marker:** `PENDING_RECORDING` appears only as a legacy
+literal required by `audit_submission_package.py --pre-recording`; it does not
+describe the current recording status. All three recordings are complete.
